@@ -1,0 +1,663 @@
+{
+  "metadata": {
+    "method": "conversation-level percentile bootstrap, paired across systems",
+    "resamples": 1000,
+    "seed": 20260919,
+    "unit": "one of the 150 locked test conversations (27 decisions each)",
+    "n_conversations": 150,
+    "confidence": 0.95,
+    "sources": [
+      "data/benchmark_1000/comparison_metrics.json",
+      "data/benchmark_1000/jev_noul_test_results.json",
+      "results/jev_noul_comparison_1000.json",
+      "data/benchmark_1000/split.json"
+    ],
+    "note": "Sol and Luna rows are the committed agent-session outputs; they are reported with intervals but excluded from paired differences."
+  },
+  "systems": {
+    "sol": {
+      "label": "GPT-5.6 Sol (as reported)",
+      "rerunnable": false,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9992592592592593,
+          "ci_low": 0.9982716049382716,
+          "ci_high": 1.0
+        },
+        "precision": {
+          "point": 0.9971988795518207,
+          "ci_low": 0.9935945764019822,
+          "ci_high": 1.0
+        },
+        "recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0
+        },
+        "f1": {
+          "point": 0.9985974754558204,
+          "ci_low": 0.99678699787071,
+          "ci_high": 1.0
+        },
+        "exact_match_rate": {
+          "point": 0.98,
+          "ci_low": 0.9533333333333334,
+          "ci_high": 1.0
+        }
+      }
+    },
+    "jev_noul_calibrated": {
+      "label": "JEV Noul, validation-calibrated",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9990123456790123,
+          "ci_low": 0.9980246913580247,
+          "ci_high": 0.9997530864197531
+        },
+        "precision": {
+          "point": 0.996268656716418,
+          "ci_low": 0.9925093632958801,
+          "ci_high": 0.9990766389658357
+        },
+        "recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0
+        },
+        "f1": {
+          "point": 0.9981308411214954,
+          "ci_low": 0.9962406015037594,
+          "ci_high": 0.9995381062355658
+        },
+        "exact_match_rate": {
+          "point": 0.9733333333333334,
+          "ci_low": 0.9466666666666667,
+          "ci_high": 0.9933333333333333
+        }
+      }
+    },
+    "luna": {
+      "label": "GPT-5.6 Luna (as reported)",
+      "rerunnable": false,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9975308641975309,
+          "ci_low": 0.9958024691358025,
+          "ci_high": 0.9990123456790123
+        },
+        "precision": {
+          "point": 0.9907235621521335,
+          "ci_low": 0.9844581929702702,
+          "ci_high": 0.9961242184337187
+        },
+        "recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0
+        },
+        "f1": {
+          "point": 0.9953401677539608,
+          "ci_low": 0.9921682365449906,
+          "ci_high": 0.9980583465041017
+        },
+        "exact_match_rate": {
+          "point": 0.9333333333333333,
+          "ci_low": 0.8866666666666667,
+          "ci_high": 0.9733333333333334
+        }
+      }
+    },
+    "modernbert_trained": {
+      "label": "ModernBERT trained heads",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9916049382716049,
+          "ci_low": 0.9881481481481481,
+          "ci_high": 0.9948148148148148
+        },
+        "precision": {
+          "point": 0.9804832713754646,
+          "ci_low": 0.9721459913495893,
+          "ci_high": 0.9876686448256965
+        },
+        "recall": {
+          "point": 0.9878277153558053,
+          "ci_low": 0.9796841745845517,
+          "ci_high": 0.9950935887415043
+        },
+        "f1": {
+          "point": 0.9841417910447762,
+          "ci_low": 0.9781274426805119,
+          "ci_high": 0.9899729787181323
+        },
+        "exact_match_rate": {
+          "point": 0.8333333333333334,
+          "ci_low": 0.7733333333333333,
+          "ci_high": 0.8933333333333333
+        }
+      }
+    },
+    "gliclass_modern_large_v3_opt_threshold": {
+      "label": "GLiClass Modern Large v3, calibrated",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9790123456790123,
+          "ci_low": 0.9748148148148148,
+          "ci_high": 0.9827160493827161
+        },
+        "precision": {
+          "point": 0.9641170915958451,
+          "ci_low": 0.952701423013923,
+          "ci_high": 0.9744570846107052
+        },
+        "recall": {
+          "point": 0.9559925093632958,
+          "ci_low": 0.9450513538748833,
+          "ci_high": 0.9671834085187686
+        },
+        "f1": {
+          "point": 0.9600376116596144,
+          "ci_low": 0.952159908883827,
+          "ci_high": 0.966795675259351
+        },
+        "exact_match_rate": {
+          "point": 0.5333333333333333,
+          "ci_low": 0.44666666666666666,
+          "ci_high": 0.6066666666666667
+        }
+      }
+    },
+    "gliclass_large_v3_opt_threshold": {
+      "label": "GLiClass Large v3, calibrated",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.965925925925926,
+          "ci_low": 0.9609876543209876,
+          "ci_high": 0.9708641975308642
+        },
+        "precision": {
+          "point": 0.9181654676258992,
+          "ci_low": 0.9054272735801852,
+          "ci_high": 0.9307841014537581
+        },
+        "recall": {
+          "point": 0.9559925093632958,
+          "ci_low": 0.945142455399842,
+          "ci_high": 0.9662960616563872
+        },
+        "f1": {
+          "point": 0.9366972477064219,
+          "ci_low": 0.928330619724425,
+          "ci_high": 0.9447066498215826
+        },
+        "exact_match_rate": {
+          "point": 0.3466666666666667,
+          "ci_low": 0.2733333333333333,
+          "ci_high": 0.4266666666666667
+        }
+      }
+    },
+    "modernbert_zero_shot_opt_threshold": {
+      "label": "ModernBERT zero-shot, calibrated",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9641975308641976,
+          "ci_low": 0.9590123456790124,
+          "ci_high": 0.9693827160493828
+        },
+        "precision": {
+          "point": 0.9253456221198156,
+          "ci_low": 0.9131896534923605,
+          "ci_high": 0.9370456905503634
+        },
+        "recall": {
+          "point": 0.9400749063670412,
+          "ci_low": 0.925511376192997,
+          "ci_high": 0.9542612617713111
+        },
+        "f1": {
+          "point": 0.9326521133302369,
+          "ci_low": 0.9232913349848194,
+          "ci_high": 0.9417603169646531
+        },
+        "exact_match_rate": {
+          "point": 0.3466666666666667,
+          "ci_low": 0.2733333333333333,
+          "ci_high": 0.4201666666666665
+        }
+      }
+    },
+    "jev": {
+      "label": "JEV Choice, 0.50",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9439506172839506,
+          "ci_low": 0.9375308641975308,
+          "ci_high": 0.9501234567901234
+        },
+        "precision": {
+          "point": 0.8247104247104247,
+          "ci_low": 0.807656012795489,
+          "ci_high": 0.8408728702608237
+        },
+        "recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0
+        },
+        "f1": {
+          "point": 0.9039356749894202,
+          "ci_low": 0.8935948062273791,
+          "ci_high": 0.9135588707316433
+        },
+        "exact_match_rate": {
+          "point": 0.18,
+          "ci_low": 0.12666666666666668,
+          "ci_high": 0.24666666666666667
+        }
+      }
+    },
+    "gliclass_modern_large_v3": {
+      "label": "GLiClass Modern Large v3, 0.50",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9409876543209876,
+          "ci_low": 0.9340740740740741,
+          "ci_high": 0.9484012345679013
+        },
+        "precision": {
+          "point": 0.83892068683565,
+          "ci_low": 0.8196954222821701,
+          "ci_high": 0.8577465281054798
+        },
+        "recall": {
+          "point": 0.9606741573033708,
+          "ci_low": 0.9507105698225504,
+          "ci_high": 0.9707614728912677
+        },
+        "f1": {
+          "point": 0.8956787429070275,
+          "ci_low": 0.8838616402770907,
+          "ci_high": 0.9075516198852509
+        },
+        "exact_match_rate": {
+          "point": 0.16666666666666666,
+          "ci_low": 0.10666666666666667,
+          "ci_high": 0.22666666666666666
+        }
+      }
+    },
+    "gliclass_large_v3": {
+      "label": "GLiClass Large v3, 0.50",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9303703703703704,
+          "ci_low": 0.922962962962963,
+          "ci_high": 0.937283950617284
+        },
+        "precision": {
+          "point": 0.8189935064935064,
+          "ci_low": 0.8017868048814175,
+          "ci_high": 0.8369386698207139
+        },
+        "recall": {
+          "point": 0.9447565543071161,
+          "ci_low": 0.9305032171591391,
+          "ci_high": 0.9572253501673654
+        },
+        "f1": {
+          "point": 0.8773913043478261,
+          "ci_low": 0.8649361386426673,
+          "ci_high": 0.8884066575631665
+        },
+        "exact_match_rate": {
+          "point": 0.12,
+          "ci_low": 0.07333333333333333,
+          "ci_high": 0.17333333333333334
+        }
+      }
+    },
+    "modernbert_zero_shot": {
+      "label": "ModernBERT zero-shot, 0.50",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9296296296296296,
+          "ci_low": 0.922716049382716,
+          "ci_high": 0.9375308641975308
+        },
+        "precision": {
+          "point": 0.8473824312333629,
+          "ci_low": 0.830713601425866,
+          "ci_high": 0.8641244101887888
+        },
+        "recall": {
+          "point": 0.8941947565543071,
+          "ci_low": 0.8768110751214651,
+          "ci_high": 0.9119870770750781
+        },
+        "f1": {
+          "point": 0.8701594533029613,
+          "ci_low": 0.8590349824646163,
+          "ci_high": 0.8823536142145645
+        },
+        "exact_match_rate": {
+          "point": 0.14,
+          "ci_low": 0.08666666666666667,
+          "ci_high": 0.2
+        }
+      }
+    },
+    "deberta_v3_large_zero_shot_c": {
+      "label": "DeBERTa-v3-large zero-shot, 0.50",
+      "rerunnable": true,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9288888888888889,
+          "ci_low": 0.9214814814814815,
+          "ci_high": 0.9365493827160494
+        },
+        "precision": {
+          "point": 0.8469750889679716,
+          "ci_low": 0.8303128126507021,
+          "ci_high": 0.8628706803174618
+        },
+        "recall": {
+          "point": 0.8913857677902621,
+          "ci_low": 0.8739130757846354,
+          "ci_high": 0.9096092730661696
+        },
+        "f1": {
+          "point": 0.8686131386861313,
+          "ci_low": 0.8561017524024872,
+          "ci_high": 0.881309215427333
+        },
+        "exact_match_rate": {
+          "point": 0.13333333333333333,
+          "ci_low": 0.08,
+          "ci_high": 0.18666666666666668
+        }
+      }
+    }
+  },
+  "paired_accuracy_differences_points": {
+    "jev_noul_calibrated minus modernbert_trained": {
+      "point": 0.7407407407407418,
+      "ci_low": 0.4444444444444362,
+      "ci_high": 1.0864197530864206,
+      "separable_at_95": true
+    },
+    "jev_noul_calibrated minus modernbert_zero_shot_opt_threshold": {
+      "point": 3.4814814814814743,
+      "ci_low": 2.962962962962956,
+      "ci_high": 4.0000000000000036,
+      "separable_at_95": true
+    },
+    "jev_noul_calibrated minus modernbert_zero_shot": {
+      "point": 6.938271604938273,
+      "ci_low": 6.148148148148147,
+      "ci_high": 7.629629629629631,
+      "separable_at_95": true
+    },
+    "modernbert_trained minus modernbert_zero_shot_opt_threshold": {
+      "point": 2.7407407407407325,
+      "ci_low": 2.1481481481481435,
+      "ci_high": 3.308641975308635,
+      "separable_at_95": true
+    },
+    "modernbert_trained minus modernbert_zero_shot": {
+      "point": 6.197530864197532,
+      "ci_low": 5.382716049382719,
+      "ci_high": 6.914197530864203,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3_opt_threshold minus jev_noul_calibrated": {
+      "point": -2.0000000000000018,
+      "ci_low": -2.4197530864197514,
+      "ci_high": -1.6049382716049387,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3_opt_threshold minus modernbert_trained": {
+      "point": -1.25925925925926,
+      "ci_low": -1.7537037037037086,
+      "ci_high": -0.7407407407407418,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3_opt_threshold minus modernbert_zero_shot_opt_threshold": {
+      "point": 1.4814814814814725,
+      "ci_low": 0.9629629629629652,
+      "ci_high": 1.9506172839506175,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3_opt_threshold minus jev": {
+      "point": 3.506172839506172,
+      "ci_low": 2.790123456790128,
+      "ci_high": 4.19753086419753,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3_opt_threshold minus modernbert_zero_shot": {
+      "point": 4.938271604938271,
+      "ci_low": 4.270987654320984,
+      "ci_high": 5.605555555555559,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3_opt_threshold minus jev_noul_calibrated": {
+      "point": -3.308641975308635,
+      "ci_low": -3.802469135802467,
+      "ci_high": -2.814197530864198,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3_opt_threshold minus modernbert_trained": {
+      "point": -2.567901234567893,
+      "ci_low": -3.1123456790123543,
+      "ci_high": -1.975308641975304,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3_opt_threshold minus gliclass_modern_large_v3_opt_threshold": {
+      "point": -1.3086419753086331,
+      "ci_low": -1.7290123456790218,
+      "ci_high": -0.8395061728394992,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3_opt_threshold minus modernbert_zero_shot_opt_threshold": {
+      "point": 0.17283950617283939,
+      "ci_low": -0.2962962962962945,
+      "ci_high": 0.6419753086419733,
+      "separable_at_95": false
+    },
+    "gliclass_large_v3_opt_threshold minus jev": {
+      "point": 2.197530864197539,
+      "ci_low": 1.4814814814814836,
+      "ci_high": 2.9629629629629672,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3_opt_threshold minus gliclass_modern_large_v3": {
+      "point": 2.4938271604938334,
+      "ci_low": 1.851851851851849,
+      "ci_high": 3.135802469135796,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3_opt_threshold minus modernbert_zero_shot": {
+      "point": 3.629629629629638,
+      "ci_low": 2.9870370370370365,
+      "ci_high": 4.222222222222227,
+      "separable_at_95": true
+    },
+    "jev minus jev_noul_calibrated": {
+      "point": -5.506172839506174,
+      "ci_low": -6.172839506172833,
+      "ci_high": -4.8888888888888875,
+      "separable_at_95": true
+    },
+    "jev minus modernbert_trained": {
+      "point": -4.765432098765432,
+      "ci_low": -5.4567901234567895,
+      "ci_high": -4.147530864197528,
+      "separable_at_95": true
+    },
+    "jev minus modernbert_zero_shot_opt_threshold": {
+      "point": -2.0246913580246995,
+      "ci_low": -2.716049382716057,
+      "ci_high": -1.3333333333333417,
+      "separable_at_95": true
+    },
+    "jev minus modernbert_zero_shot": {
+      "point": 1.4320987654320994,
+      "ci_low": 0.5919753086419719,
+      "ci_high": 2.2962962962962963,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3 minus jev_noul_calibrated": {
+      "point": -5.802469135802468,
+      "ci_low": -6.494444444444453,
+      "ci_high": -5.061111111111109,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3 minus modernbert_trained": {
+      "point": -5.061728395061726,
+      "ci_low": -5.777777777777771,
+      "ci_high": -4.246913580246914,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3 minus gliclass_modern_large_v3_opt_threshold": {
+      "point": -3.8024691358024665,
+      "ci_low": -4.345679012345682,
+      "ci_high": -3.2098765432098775,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3 minus modernbert_zero_shot_opt_threshold": {
+      "point": -2.320987654320994,
+      "ci_low": -2.987654320987654,
+      "ci_high": -1.654320987654323,
+      "separable_at_95": true
+    },
+    "gliclass_modern_large_v3 minus jev": {
+      "point": -0.2962962962962945,
+      "ci_low": -1.2358024691357967,
+      "ci_high": 0.7166666666666718,
+      "separable_at_95": false
+    },
+    "gliclass_modern_large_v3 minus modernbert_zero_shot": {
+      "point": 1.1358024691358048,
+      "ci_low": 0.39506172839506304,
+      "ci_high": 1.8271604938271624,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus jev_noul_calibrated": {
+      "point": -6.864197530864191,
+      "ci_low": -7.604938271604944,
+      "ci_high": -6.148148148148147,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus modernbert_trained": {
+      "point": -6.123456790123449,
+      "ci_low": -6.839506172839505,
+      "ci_high": -5.382716049382719,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus gliclass_modern_large_v3_opt_threshold": {
+      "point": -4.864197530864189,
+      "ci_low": -5.580246913580245,
+      "ci_high": -4.147530864197528,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus gliclass_large_v3_opt_threshold": {
+      "point": -3.5555555555555562,
+      "ci_low": -4.099382716049389,
+      "ci_high": -3.0123456790123515,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus modernbert_zero_shot_opt_threshold": {
+      "point": -3.382716049382717,
+      "ci_low": -4.049382716049377,
+      "ci_high": -2.76543209876543,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus jev": {
+      "point": -1.3580246913580174,
+      "ci_low": -2.272222222222227,
+      "ci_high": -0.4444444444444473,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus gliclass_modern_large_v3": {
+      "point": -1.061728395061723,
+      "ci_low": -1.85185185185186,
+      "ci_high": -0.2962962962962945,
+      "separable_at_95": true
+    },
+    "gliclass_large_v3 minus modernbert_zero_shot": {
+      "point": 0.07407407407408195,
+      "ci_low": -0.666666666666671,
+      "ci_high": 0.7407407407407418,
+      "separable_at_95": false
+    },
+    "modernbert_zero_shot minus modernbert_zero_shot_opt_threshold": {
+      "point": -3.456790123456799,
+      "ci_low": -3.975308641975306,
+      "ci_high": -2.888888888888896,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus jev_noul_calibrated": {
+      "point": -7.012345679012344,
+      "ci_low": -7.777777777777784,
+      "ci_high": -6.246913580246916,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus modernbert_trained": {
+      "point": -6.271604938271603,
+      "ci_low": -7.012345679012344,
+      "ci_high": -5.481481481481487,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus gliclass_modern_large_v3_opt_threshold": {
+      "point": -5.012345679012342,
+      "ci_low": -5.7530864197530835,
+      "ci_high": -4.246913580246914,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus gliclass_large_v3_opt_threshold": {
+      "point": -3.703703703703709,
+      "ci_low": -4.320987654320985,
+      "ci_high": -3.0123456790123515,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus modernbert_zero_shot_opt_threshold": {
+      "point": -3.5308641975308697,
+      "ci_low": -4.172839506172843,
+      "ci_high": -2.8641975308641987,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus jev": {
+      "point": -1.5061728395061702,
+      "ci_low": -2.17283950617283,
+      "ci_high": -0.8148148148148127,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus gliclass_modern_large_v3": {
+      "point": -1.2098765432098757,
+      "ci_low": -2.098765432098759,
+      "ci_high": -0.24691358024692106,
+      "separable_at_95": true
+    },
+    "deberta_v3_large_zero_shot_c minus gliclass_large_v3": {
+      "point": -0.1481481481481528,
+      "ci_low": -0.8888888888888946,
+      "ci_high": 0.6419753086419733,
+      "separable_at_95": false
+    },
+    "deberta_v3_large_zero_shot_c minus modernbert_zero_shot": {
+      "point": -0.07407407407407085,
+      "ci_low": -0.8148148148148127,
+      "ci_high": 0.666666666666671,
+      "separable_at_95": false
+    }
+  }
+}
