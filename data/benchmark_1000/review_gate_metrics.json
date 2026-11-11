@@ -1,0 +1,2662 @@
+{
+  "metadata": {
+    "method": "per-label published thresholds; margin = |logit(p) - logit(t)|; global and per-label review cuts fitted on validation to a selective-accuracy target; reported on the locked test split",
+    "targets": [
+      0.99,
+      0.995,
+      0.999
+    ],
+    "seed": 20260919,
+    "resamples": 1000,
+    "cost_ratios_c_error_over_c_review": [
+      1,
+      3,
+      10,
+      30,
+      100,
+      300,
+      1000
+    ],
+    "not_gated": {
+      "modernbert_trained_heads": "test probabilities only; no validation probabilities committed",
+      "deberta_v3_large_zeroshot": "test probabilities only",
+      "jev_noul": "see hosted_diagnostic: 4 calibrated errors; 0.50-rule errors repaired by calibration",
+      "jev_choice": "see hosted_diagnostic: no validation probabilities; 0.01-quantized",
+      "sol_luna": "no probabilities"
+    }
+  },
+  "systems": {
+    "gliclass_modern_large_v3": {
+      "label": "GLiClass Modern Large v3",
+      "validation_accuracy": 0.9782716049382716,
+      "validation_errors": 88,
+      "test_accuracy": 0.9790123456790123,
+      "test_errors": 85,
+      "auroc_margin_vs_correct_test": 0.6234107262072547,
+      "auroc_margin_vs_correct_test_ci": [
+        0.5521859753123951,
+        0.7008538022147631
+      ],
+      "test_errors_median_margin_nats": 2.400393246502144,
+      "test_errors_share_at_least_2_nats": 0.5647058823529412,
+      "ece_test_by_bins": {
+        "10": 0.048311137656790105,
+        "15": 0.05301177123703697,
+        "20": 0.05603818639753086
+      },
+      "per_label": [
+        {
+          "attribute": "reset_equipment_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 47,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 50,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_work_due_to_service_issues",
+          "threshold": 0.5,
+          "validation_positives": 23,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 18,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "lagging_issues",
+          "threshold": 0.77,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 23,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "poor_performance_complaint",
+          "threshold": 0.97,
+          "validation_positives": 56,
+          "validation_errors": 19,
+          "validation_false_negatives": 12,
+          "test_positives": 54,
+          "test_errors": 14,
+          "test_false_negatives": 7
+        },
+        {
+          "attribute": "glitching_issue",
+          "threshold": 0.5,
+          "validation_positives": 45,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 31,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "technician_visits_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 30,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 24,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "poor_service_quality_complaint",
+          "threshold": 0.99,
+          "validation_positives": 63,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 63,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "throughput_issues_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 23,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "receiving_error_messages",
+          "threshold": 0.45,
+          "validation_positives": 48,
+          "validation_errors": 5,
+          "validation_false_negatives": 1,
+          "test_positives": 57,
+          "test_errors": 7,
+          "test_false_negatives": 3
+        },
+        {
+          "attribute": "remove_phone_lines_requested",
+          "threshold": 0.5,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 13,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "phone_purchase_upgrade_requested",
+          "threshold": 0.06,
+          "validation_positives": 16,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 21,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "issue_inside_building_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 60,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 64,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "issue_outside_building_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 36,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 38,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "sim_memory_issues_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 16,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 15,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "app_issue_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 60,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 51,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unknown_charges_on_bill",
+          "threshold": 0.5,
+          "validation_positives": 35,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 34,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "credit_requested",
+          "threshold": 0.92,
+          "validation_positives": 54,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 55,
+          "test_errors": 3,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "credit_applied_by_agent",
+          "threshold": 0.5,
+          "validation_positives": 28,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 16,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "phone_service_issue",
+          "threshold": 0.99,
+          "validation_positives": 49,
+          "validation_errors": 5,
+          "validation_false_negatives": 0,
+          "test_positives": 45,
+          "test_errors": 3,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "smart_home_manager_issue",
+          "threshold": 0.5,
+          "validation_positives": 28,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 30,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "sales_attempt_by_agent",
+          "threshold": 0.5,
+          "validation_positives": 40,
+          "validation_errors": 40,
+          "validation_false_negatives": 40,
+          "test_positives": 37,
+          "test_errors": 37,
+          "test_false_negatives": 37
+        },
+        {
+          "attribute": "agent_attempted_resolution",
+          "threshold": 0.95,
+          "validation_positives": 128,
+          "validation_errors": 19,
+          "validation_false_negatives": 0,
+          "test_positives": 129,
+          "test_errors": 21,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "multiple_contacts_same_issue",
+          "threshold": 0.5,
+          "validation_positives": 41,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 43,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "fiber_line_issue_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 19,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 18,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_activate_internet",
+          "threshold": 0.5,
+          "validation_positives": 32,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 31,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_connect_multiple_devices",
+          "threshold": 0.98,
+          "validation_positives": 29,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 33,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "resolution_time_concern",
+          "threshold": 0.5,
+          "validation_positives": 57,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 52,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        }
+      ],
+      "gates": {
+        "99": {
+          "status": "fitted",
+          "global_cut_nats": 8.084065986372664,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.8822222222222222,
+                "selective_accuracy": 0.9916142557651991,
+                "errors_total": 88,
+                "errors_caught": 84,
+                "errors_residual": 4,
+                "residual_error_rate": 0.0009876543209876543
+              },
+              "test": {
+                "ask_rate": 0.8767901234567901,
+                "selective_accuracy": 0.9939879759519038,
+                "errors_total": 85,
+                "errors_caught": 82,
+                "errors_residual": 3,
+                "residual_error_rate": 0.0007407407407407407
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.8671604938271605,
+                  0.8849444444444445
+                ],
+                "selective_accuracy": [
+                  0.987124068321754,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.5432098765432158
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.03333333333333333,
+                "selective_accuracy": 0.9900383141762452,
+                "errors_total": 88,
+                "errors_caught": 49,
+                "errors_residual": 39,
+                "residual_error_rate": 0.00962962962962963
+              },
+              "test": {
+                "ask_rate": 0.03777777777777778,
+                "selective_accuracy": 0.9910187323582242,
+                "errors_total": 85,
+                "errors_caught": 50,
+                "errors_residual": 35,
+                "residual_error_rate": 0.008641975308641974
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.03358024691358025,
+                  0.042222222222222223
+                ],
+                "selective_accuracy": [
+                  0.9879882172924184,
+                  0.9938415743461291
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.44444444444444453,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.19973910428953018,
+                "unable_to_work_due_to_service_issues": 2.4236151648643323,
+                "lagging_issues": 0.029075583314477127,
+                "poor_performance_complaint": 0.3051738015689809,
+                "glitching_issue": 1.5476401226861258,
+                "technician_visits_mentioned": 1.709472838491413,
+                "poor_service_quality_complaint": 0.4495708529564899,
+                "throughput_issues_mentioned": 2.3349923854425128,
+                "receiving_error_messages": 0.014305530942732875,
+                "remove_phone_lines_requested": 5.8236643481083075,
+                "phone_purchase_upgrade_requested": 0.11207145815102715,
+                "issue_inside_building_mentioned": 1.8495331646425983,
+                "issue_outside_building_mentioned": 3.943340716057787,
+                "sim_memory_issues_mentioned": 2.51470763750573,
+                "app_issue_mentioned": 1.4713233374652115,
+                "unknown_charges_on_bill": 3.6876388830906333,
+                "credit_requested": 0.0468721339937872,
+                "credit_applied_by_agent": 2.0753600976537716,
+                "phone_service_issue": 0.0386762044588691,
+                "smart_home_manager_issue": 3.6317448112721804,
+                "sales_attempt_by_agent": 7.688753376753044,
+                "agent_attempted_resolution": 2.9479730092174203,
+                "multiple_contacts_same_issue": 0.1755390999788198,
+                "fiber_line_issue_mentioned": 2.421525786489153,
+                "unable_to_activate_internet": 2.102689999029519,
+                "unable_to_connect_multiple_devices": 0.3690505064964915,
+                "resolution_time_concern": 1.4172419064423376
+              },
+              "distinct_cuts": 27,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.006666666666666667,
+                "lagging_issues": 0.0,
+                "poor_performance_complaint": 0.12666666666666668,
+                "glitching_issue": 0.006666666666666667,
+                "technician_visits_mentioned": 0.013333333333333334,
+                "poor_service_quality_complaint": 0.006666666666666667,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.0,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.0,
+                "issue_inside_building_mentioned": 0.0,
+                "issue_outside_building_mentioned": 0.0,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.02666666666666667,
+                "unknown_charges_on_bill": 0.0,
+                "credit_requested": 0.0,
+                "credit_applied_by_agent": 0.0,
+                "phone_service_issue": 0.006666666666666667,
+                "smart_home_manager_issue": 0.013333333333333334,
+                "sales_attempt_by_agent": 0.16,
+                "agent_attempted_resolution": 0.6266666666666667,
+                "multiple_contacts_same_issue": 0.006666666666666667,
+                "fiber_line_issue_mentioned": 0.013333333333333334,
+                "unable_to_activate_internet": 0.0,
+                "unable_to_connect_multiple_devices": 0.0,
+                "resolution_time_concern": 0.006666666666666667
+              },
+              "labels_routed_over_half": [
+                "agent_attempted_resolution"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.17081481481481484,
+              0.8879012345679013
+            ],
+            "selective_accuracy_ci": [
+              0.9813951520875143,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.704,
+            "draws_where_cut_unreachable": 0
+          }
+        },
+        "99.5": {
+          "status": "fitted",
+          "global_cut_nats": 8.148554573435785,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.8883950617283951,
+                "selective_accuracy": 0.995575221238938,
+                "errors_total": 88,
+                "errors_caught": 86,
+                "errors_residual": 2,
+                "residual_error_rate": 0.0004938271604938272
+              },
+              "test": {
+                "ask_rate": 0.8822222222222222,
+                "selective_accuracy": 0.9937106918238994,
+                "errors_total": 85,
+                "errors_caught": 82,
+                "errors_residual": 3,
+                "residual_error_rate": 0.0007407407407407407
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.8733271604938271,
+                  0.8898827160493827
+                ],
+                "selective_accuracy": [
+                  0.9866041264478765,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.6172839506172867
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.0437037037037037,
+                "selective_accuracy": 0.9950942421895171,
+                "errors_total": 88,
+                "errors_caught": 69,
+                "errors_residual": 19,
+                "residual_error_rate": 0.004691358024691358
+              },
+              "test": {
+                "ask_rate": 0.04666666666666667,
+                "selective_accuracy": 0.9953379953379954,
+                "errors_total": 85,
+                "errors_caught": 67,
+                "errors_residual": 18,
+                "residual_error_rate": 0.0044444444444444444
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.041728395061728395,
+                  0.0516111111111111
+                ],
+                "selective_accuracy": [
+                  0.9932607131869465,
+                  0.9971693119579618
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.2962962962962966,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.19973910428953018,
+                "unable_to_work_due_to_service_issues": 2.4236151648643323,
+                "lagging_issues": 0.029075583314477127,
+                "poor_performance_complaint": 0.681686351450213,
+                "glitching_issue": 1.5476401226861258,
+                "technician_visits_mentioned": 1.709472838491413,
+                "poor_service_quality_complaint": 0.4495708529564899,
+                "throughput_issues_mentioned": 2.3349923854425128,
+                "receiving_error_messages": 0.43137708749465675,
+                "remove_phone_lines_requested": 5.8236643481083075,
+                "phone_purchase_upgrade_requested": 0.11207145815102715,
+                "issue_inside_building_mentioned": 1.8495331646425983,
+                "issue_outside_building_mentioned": 3.943340716057787,
+                "sim_memory_issues_mentioned": 2.51470763750573,
+                "app_issue_mentioned": 1.4713233374652115,
+                "unknown_charges_on_bill": 3.6876388830906333,
+                "credit_requested": 0.0468721339937872,
+                "credit_applied_by_agent": 2.0753600976537716,
+                "phone_service_issue": 0.0386762044588691,
+                "smart_home_manager_issue": 3.6317448112721804,
+                "sales_attempt_by_agent": 8.134125559135418,
+                "agent_attempted_resolution": 2.9479730092174203,
+                "multiple_contacts_same_issue": 0.1755390999788198,
+                "fiber_line_issue_mentioned": 2.421525786489153,
+                "unable_to_activate_internet": 2.102689999029519,
+                "unable_to_connect_multiple_devices": 0.3690505064964915,
+                "resolution_time_concern": 1.4172419064423376
+              },
+              "distinct_cuts": 27,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.006666666666666667,
+                "lagging_issues": 0.0,
+                "poor_performance_complaint": 0.25333333333333335,
+                "glitching_issue": 0.006666666666666667,
+                "technician_visits_mentioned": 0.013333333333333334,
+                "poor_service_quality_complaint": 0.006666666666666667,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.04666666666666667,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.0,
+                "issue_inside_building_mentioned": 0.0,
+                "issue_outside_building_mentioned": 0.0,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.02666666666666667,
+                "unknown_charges_on_bill": 0.0,
+                "credit_requested": 0.0,
+                "credit_applied_by_agent": 0.0,
+                "phone_service_issue": 0.006666666666666667,
+                "smart_home_manager_issue": 0.013333333333333334,
+                "sales_attempt_by_agent": 0.22666666666666666,
+                "agent_attempted_resolution": 0.6266666666666667,
+                "multiple_contacts_same_issue": 0.006666666666666667,
+                "fiber_line_issue_mentioned": 0.013333333333333334,
+                "unable_to_activate_internet": 0.0,
+                "unable_to_connect_multiple_devices": 0.0,
+                "resolution_time_concern": 0.006666666666666667
+              },
+              "labels_routed_over_half": [
+                "agent_attempted_resolution"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.8639444444444444,
+              0.8990123456790123
+            ],
+            "selective_accuracy_ci": [
+              0.9858277950477008,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.46,
+            "draws_where_cut_unreachable": 0
+          }
+        },
+        "99.9": {
+          "status": "fitted",
+          "global_cut_nats": 8.35611773917399,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.9081481481481481,
+                "selective_accuracy": 1.0,
+                "errors_total": 88,
+                "errors_caught": 88,
+                "errors_residual": 0,
+                "residual_error_rate": 0.0
+              },
+              "test": {
+                "ask_rate": 0.8970370370370371,
+                "selective_accuracy": 1.0,
+                "errors_total": 85,
+                "errors_caught": 85,
+                "errors_residual": 0,
+                "residual_error_rate": 0.0
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.8891358024691358,
+                  0.9041975308641975
+                ],
+                "selective_accuracy": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -1.1111111111111072
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.057777777777777775,
+                "selective_accuracy": 0.9992138364779874,
+                "errors_total": 88,
+                "errors_caught": 85,
+                "errors_residual": 3,
+                "residual_error_rate": 0.0007407407407407407
+              },
+              "test": {
+                "ask_rate": 0.05728395061728395,
+                "selective_accuracy": 0.997904662126768,
+                "errors_total": 85,
+                "errors_caught": 77,
+                "errors_residual": 8,
+                "residual_error_rate": 0.0019753086419753087
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.05185185185185185,
+                  0.06272222222222222
+                ],
+                "selective_accuracy": [
+                  0.9965778294592188,
+                  0.9992121900446973
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.049382716049382186,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.19973910428953018,
+                "unable_to_work_due_to_service_issues": 2.4236151648643323,
+                "lagging_issues": 0.029075583314477127,
+                "poor_performance_complaint": 1.4292037161033893,
+                "glitching_issue": 1.5476401226861258,
+                "technician_visits_mentioned": 1.709472838491413,
+                "poor_service_quality_complaint": 0.4495708529564899,
+                "throughput_issues_mentioned": 2.3349923854425128,
+                "receiving_error_messages": 1.4540851180778005,
+                "remove_phone_lines_requested": 5.8236643481083075,
+                "phone_purchase_upgrade_requested": 0.11207145815102715,
+                "issue_inside_building_mentioned": 1.8495331646425983,
+                "issue_outside_building_mentioned": 3.943340716057787,
+                "sim_memory_issues_mentioned": 2.51470763750573,
+                "app_issue_mentioned": 1.4713233374652115,
+                "unknown_charges_on_bill": 3.6876388830906333,
+                "credit_requested": 0.0468721339937872,
+                "credit_applied_by_agent": 2.0753600976537716,
+                "phone_service_issue": 0.31424116820355597,
+                "smart_home_manager_issue": 3.6317448112721804,
+                "sales_attempt_by_agent": 8.352589718361305,
+                "agent_attempted_resolution": 3.0361017484302395,
+                "multiple_contacts_same_issue": 0.1755390999788198,
+                "fiber_line_issue_mentioned": 2.421525786489153,
+                "unable_to_activate_internet": 2.102689999029519,
+                "unable_to_connect_multiple_devices": 0.3690505064964915,
+                "resolution_time_concern": 1.4172419064423376
+              },
+              "distinct_cuts": 27,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.006666666666666667,
+                "lagging_issues": 0.0,
+                "poor_performance_complaint": 0.38666666666666666,
+                "glitching_issue": 0.006666666666666667,
+                "technician_visits_mentioned": 0.013333333333333334,
+                "poor_service_quality_complaint": 0.006666666666666667,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.13333333333333333,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.0,
+                "issue_inside_building_mentioned": 0.0,
+                "issue_outside_building_mentioned": 0.0,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.02666666666666667,
+                "unknown_charges_on_bill": 0.0,
+                "credit_requested": 0.0,
+                "credit_applied_by_agent": 0.0,
+                "phone_service_issue": 0.02,
+                "smart_home_manager_issue": 0.013333333333333334,
+                "sales_attempt_by_agent": 0.24666666666666667,
+                "agent_attempted_resolution": 0.66,
+                "multiple_contacts_same_issue": 0.006666666666666667,
+                "fiber_line_issue_mentioned": 0.013333333333333334,
+                "unable_to_activate_internet": 0.0,
+                "unable_to_connect_multiple_devices": 0.0,
+                "resolution_time_concern": 0.006666666666666667
+              },
+              "labels_routed_over_half": [
+                "agent_attempted_resolution"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.8767901234567901,
+              0.9042037037037037
+            ],
+            "selective_accuracy_ci": [
+              0.9872019771273502,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.665,
+            "draws_where_cut_unreachable": 0
+          }
+        }
+      },
+      "cost_per_1000_decisions": {
+        "no gate": {
+          "1": 20.987654320987655,
+          "3": 62.96296296296296,
+          "10": 209.87654320987656,
+          "30": 629.6296296296297,
+          "100": 2098.7654320987654,
+          "300": 6296.2962962962965,
+          "1000": 20987.654320987655
+        },
+        "99% global": {
+          "1": 877.5308641975308,
+          "3": 879.0123456790124,
+          "10": 884.1975308641975,
+          "30": 899.0123456790124,
+          "100": 950.8641975308642,
+          "300": 1099.0123456790122,
+          "1000": 1617.5308641975307
+        },
+        "99% per-label": {
+          "1": 46.41975308641975,
+          "3": 63.70370370370371,
+          "10": 124.19753086419752,
+          "30": 297.03703703703707,
+          "100": 901.9753086419753,
+          "300": 2630.3703703703704,
+          "1000": 8679.753086419752
+        },
+        "99.5% global": {
+          "1": 882.9629629629629,
+          "3": 884.4444444444445,
+          "10": 889.6296296296297,
+          "30": 904.4444444444445,
+          "100": 956.2962962962963,
+          "300": 1104.4444444444443,
+          "1000": 1622.962962962963
+        },
+        "99.5% per-label": {
+          "1": 51.111111111111114,
+          "3": 60.0,
+          "10": 91.11111111111111,
+          "30": 180.0,
+          "100": 491.1111111111111,
+          "300": 1380.0,
+          "1000": 4491.111111111111
+        },
+        "99.9% global": {
+          "1": 897.0370370370371,
+          "3": 897.0370370370371,
+          "10": 897.0370370370371,
+          "30": 897.0370370370371,
+          "100": 897.0370370370371,
+          "300": 897.0370370370371,
+          "1000": 897.0370370370371
+        },
+        "99.9% per-label": {
+          "1": 59.25925925925926,
+          "3": 63.20987654320988,
+          "10": 77.03703703703704,
+          "30": 116.5432098765432,
+          "100": 254.81481481481484,
+          "300": 649.8765432098766,
+          "1000": 2032.5925925925926
+        }
+      }
+    },
+    "gliclass_large_v3": {
+      "label": "GLiClass Large v3",
+      "validation_accuracy": 0.9651851851851851,
+      "validation_errors": 141,
+      "test_accuracy": 0.965925925925926,
+      "test_errors": 138,
+      "auroc_margin_vs_correct_test": 0.7044563735514656,
+      "auroc_margin_vs_correct_test_ci": [
+        0.652798254425344,
+        0.7570037353398195
+      ],
+      "test_errors_median_margin_nats": 3.69773780320322,
+      "test_errors_share_at_least_2_nats": 0.7028985507246377,
+      "ece_test_by_bins": {
+        "10": 0.0644107130839506,
+        "15": 0.06501591390370372,
+        "20": 0.06452103776543212
+      },
+      "per_label": [
+        {
+          "attribute": "reset_equipment_mentioned",
+          "threshold": 0.72,
+          "validation_positives": 47,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 50,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_work_due_to_service_issues",
+          "threshold": 0.5,
+          "validation_positives": 23,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 18,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "lagging_issues",
+          "threshold": 0.5,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 23,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "poor_performance_complaint",
+          "threshold": 0.14,
+          "validation_positives": 56,
+          "validation_errors": 36,
+          "validation_false_negatives": 0,
+          "test_positives": 54,
+          "test_errors": 34,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "glitching_issue",
+          "threshold": 0.5,
+          "validation_positives": 45,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 31,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "technician_visits_mentioned",
+          "threshold": 0.78,
+          "validation_positives": 30,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 24,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "poor_service_quality_complaint",
+          "threshold": 0.99,
+          "validation_positives": 63,
+          "validation_errors": 11,
+          "validation_false_negatives": 0,
+          "test_positives": 63,
+          "test_errors": 10,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "throughput_issues_mentioned",
+          "threshold": 0.88,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 23,
+          "test_errors": 1,
+          "test_false_negatives": 1
+        },
+        {
+          "attribute": "receiving_error_messages",
+          "threshold": 0.63,
+          "validation_positives": 48,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 57,
+          "test_errors": 1,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "remove_phone_lines_requested",
+          "threshold": 0.5,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 13,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "phone_purchase_upgrade_requested",
+          "threshold": 0.01,
+          "validation_positives": 16,
+          "validation_errors": 10,
+          "validation_false_negatives": 10,
+          "test_positives": 21,
+          "test_errors": 8,
+          "test_false_negatives": 8
+        },
+        {
+          "attribute": "issue_inside_building_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 60,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 64,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "issue_outside_building_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 36,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 38,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "sim_memory_issues_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 16,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 15,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "app_issue_mentioned",
+          "threshold": 0.18,
+          "validation_positives": 60,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 51,
+          "test_errors": 1,
+          "test_false_negatives": 1
+        },
+        {
+          "attribute": "unknown_charges_on_bill",
+          "threshold": 0.5,
+          "validation_positives": 35,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 34,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "credit_requested",
+          "threshold": 0.99,
+          "validation_positives": 54,
+          "validation_errors": 3,
+          "validation_false_negatives": 0,
+          "test_positives": 55,
+          "test_errors": 2,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "credit_applied_by_agent",
+          "threshold": 0.5,
+          "validation_positives": 28,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 16,
+          "test_errors": 2,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "phone_service_issue",
+          "threshold": 0.95,
+          "validation_positives": 49,
+          "validation_errors": 2,
+          "validation_false_negatives": 0,
+          "test_positives": 45,
+          "test_errors": 2,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "smart_home_manager_issue",
+          "threshold": 0.94,
+          "validation_positives": 28,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 30,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "sales_attempt_by_agent",
+          "threshold": 0.5,
+          "validation_positives": 40,
+          "validation_errors": 40,
+          "validation_false_negatives": 40,
+          "test_positives": 37,
+          "test_errors": 37,
+          "test_false_negatives": 37
+        },
+        {
+          "attribute": "agent_attempted_resolution",
+          "threshold": 0.5,
+          "validation_positives": 128,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 129,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "multiple_contacts_same_issue",
+          "threshold": 0.99,
+          "validation_positives": 41,
+          "validation_errors": 39,
+          "validation_false_negatives": 0,
+          "test_positives": 43,
+          "test_errors": 40,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "fiber_line_issue_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 19,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 18,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_activate_internet",
+          "threshold": 0.5,
+          "validation_positives": 32,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 31,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_connect_multiple_devices",
+          "threshold": 0.5,
+          "validation_positives": 29,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 33,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "resolution_time_concern",
+          "threshold": 0.99,
+          "validation_positives": 57,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 52,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        }
+      ],
+      "gates": {
+        "99": {
+          "status": "fitted",
+          "global_cut_nats": 11.440581146841094,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.9303703703703704,
+                "selective_accuracy": 0.9929078014184397,
+                "errors_total": 141,
+                "errors_caught": 139,
+                "errors_residual": 2,
+                "residual_error_rate": 0.0004938271604938272
+              },
+              "test": {
+                "ask_rate": 0.9269135802469136,
+                "selective_accuracy": 0.9898648648648649,
+                "errors_total": 138,
+                "errors_caught": 135,
+                "errors_residual": 3,
+                "residual_error_rate": 0.0007407407407407407
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.9202469135802469,
+                  0.9328395061728395
+                ],
+                "selective_accuracy": [
+                  0.9762671371550877,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.34567901234567877
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.052098765432098765,
+                "selective_accuracy": 0.9901015889554572,
+                "errors_total": 141,
+                "errors_caught": 103,
+                "errors_residual": 38,
+                "residual_error_rate": 0.009382716049382716
+              },
+              "test": {
+                "ask_rate": 0.05382716049382716,
+                "selective_accuracy": 0.9911273486430062,
+                "errors_total": 138,
+                "errors_caught": 104,
+                "errors_residual": 34,
+                "residual_error_rate": 0.008395061728395062
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.04888271604938272,
+                  0.05876543209876543
+                ],
+                "selective_accuracy": [
+                  0.9882901694233021,
+                  0.9939917189814776
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.17283950617283939,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.00799248831587307,
+                "unable_to_work_due_to_service_issues": 2.3758704338423113,
+                "lagging_issues": 1.8240169206302537,
+                "poor_performance_complaint": 5.787397823653906,
+                "glitching_issue": 2.6617632409506737,
+                "technician_visits_mentioned": 0.054474914684943476,
+                "poor_service_quality_complaint": 1.0987496079253987,
+                "throughput_issues_mentioned": 0.018043966318887605,
+                "receiving_error_messages": 0.011835840350504112,
+                "remove_phone_lines_requested": 5.413574200579265,
+                "phone_purchase_upgrade_requested": 1.4479891815645156,
+                "issue_inside_building_mentioned": 6.085007494966524,
+                "issue_outside_building_mentioned": 4.005296139613536,
+                "sim_memory_issues_mentioned": 4.4132785906704495,
+                "app_issue_mentioned": 0.018308723010425076,
+                "unknown_charges_on_bill": 4.688782066841229,
+                "credit_requested": 0.2936759710720942,
+                "credit_applied_by_agent": 1.0344965383261093,
+                "phone_service_issue": 0.12509481265932054,
+                "smart_home_manager_issue": 0.12664281021035872,
+                "sales_attempt_by_agent": 10.854352409029909,
+                "agent_attempted_resolution": 0.7746233658340439,
+                "multiple_contacts_same_issue": 3.7269814301808593,
+                "fiber_line_issue_mentioned": 4.8067103086333285,
+                "unable_to_activate_internet": 4.688386838640066,
+                "unable_to_connect_multiple_devices": 4.081234952111552,
+                "resolution_time_concern": 0.44414231320986985
+              },
+              "distinct_cuts": 27,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.006666666666666667,
+                "lagging_issues": 0.006666666666666667,
+                "poor_performance_complaint": 0.6533333333333333,
+                "glitching_issue": 0.0,
+                "technician_visits_mentioned": 0.0,
+                "poor_service_quality_complaint": 0.06,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.0,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.04,
+                "issue_inside_building_mentioned": 0.02,
+                "issue_outside_building_mentioned": 0.0,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.0,
+                "unknown_charges_on_bill": 0.006666666666666667,
+                "credit_requested": 0.013333333333333334,
+                "credit_applied_by_agent": 0.03333333333333333,
+                "phone_service_issue": 0.0,
+                "smart_home_manager_issue": 0.0,
+                "sales_attempt_by_agent": 0.19333333333333333,
+                "agent_attempted_resolution": 0.006666666666666667,
+                "multiple_contacts_same_issue": 0.3933333333333333,
+                "fiber_line_issue_mentioned": 0.0,
+                "unable_to_activate_internet": 0.006666666666666667,
+                "unable_to_connect_multiple_devices": 0.006666666666666667,
+                "resolution_time_concern": 0.006666666666666667
+              },
+              "labels_routed_over_half": [
+                "poor_performance_complaint"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.9098765432098765,
+              0.9612407407407407
+            ],
+            "selective_accuracy_ci": [
+              0.9688449182242991,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.456,
+            "draws_where_cut_unreachable": 0
+          }
+        },
+        "99.5": {
+          "status": "fitted",
+          "global_cut_nats": 11.558961853443133,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.9330864197530864,
+                "selective_accuracy": 0.996309963099631,
+                "errors_total": 141,
+                "errors_caught": 140,
+                "errors_residual": 1,
+                "residual_error_rate": 0.0002469135802469136
+              },
+              "test": {
+                "ask_rate": 0.9296296296296296,
+                "selective_accuracy": 0.9929824561403509,
+                "errors_total": 138,
+                "errors_caught": 136,
+                "errors_residual": 2,
+                "residual_error_rate": 0.0004938271604938272
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.922962962962963,
+                  0.9358024691358025
+                ],
+                "selective_accuracy": [
+                  0.9822064056939501,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.34567901234567877
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.06074074074074074,
+                "selective_accuracy": 0.9950052576235542,
+                "errors_total": 141,
+                "errors_caught": 122,
+                "errors_residual": 19,
+                "residual_error_rate": 0.004691358024691358
+              },
+              "test": {
+                "ask_rate": 0.06691358024691359,
+                "selective_accuracy": 0.9960306959513099,
+                "errors_total": 138,
+                "errors_caught": 123,
+                "errors_residual": 15,
+                "residual_error_rate": 0.003703703703703704
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.060981481481481484,
+                  0.0728395061728395
+                ],
+                "selective_accuracy": [
+                  0.9939231808237753,
+                  0.9978841716165229
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.6172839506172846,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.00799248831587307,
+                "unable_to_work_due_to_service_issues": 2.3758704338423113,
+                "lagging_issues": 1.8240169206302537,
+                "poor_performance_complaint": 6.172267752825011,
+                "glitching_issue": 2.6617632409506737,
+                "technician_visits_mentioned": 0.054474914684943476,
+                "poor_service_quality_complaint": 2.3452532750848105,
+                "throughput_issues_mentioned": 0.018043966318887605,
+                "receiving_error_messages": 0.011835840350504112,
+                "remove_phone_lines_requested": 5.413574200579265,
+                "phone_purchase_upgrade_requested": 2.7131264064258485,
+                "issue_inside_building_mentioned": 6.085007494966524,
+                "issue_outside_building_mentioned": 4.005296139613536,
+                "sim_memory_issues_mentioned": 4.4132785906704495,
+                "app_issue_mentioned": 0.018308723010425076,
+                "unknown_charges_on_bill": 4.688782066841229,
+                "credit_requested": 0.2936759710720942,
+                "credit_applied_by_agent": 1.0344965383261093,
+                "phone_service_issue": 0.12509481265932054,
+                "smart_home_manager_issue": 0.12664281021035872,
+                "sales_attempt_by_agent": 11.487249458187536,
+                "agent_attempted_resolution": 0.7746233658340439,
+                "multiple_contacts_same_issue": 4.064832580601956,
+                "fiber_line_issue_mentioned": 4.8067103086333285,
+                "unable_to_activate_internet": 4.688386838640066,
+                "unable_to_connect_multiple_devices": 4.081234952111552,
+                "resolution_time_concern": 0.44414231320986985
+              },
+              "distinct_cuts": 27,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.006666666666666667,
+                "lagging_issues": 0.006666666666666667,
+                "poor_performance_complaint": 0.72,
+                "glitching_issue": 0.0,
+                "technician_visits_mentioned": 0.0,
+                "poor_service_quality_complaint": 0.15333333333333332,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.0,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.11333333333333333,
+                "issue_inside_building_mentioned": 0.02,
+                "issue_outside_building_mentioned": 0.0,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.0,
+                "unknown_charges_on_bill": 0.006666666666666667,
+                "credit_requested": 0.013333333333333334,
+                "credit_applied_by_agent": 0.03333333333333333,
+                "phone_service_issue": 0.0,
+                "smart_home_manager_issue": 0.0,
+                "sales_attempt_by_agent": 0.25333333333333335,
+                "agent_attempted_resolution": 0.006666666666666667,
+                "multiple_contacts_same_issue": 0.4533333333333333,
+                "fiber_line_issue_mentioned": 0.0,
+                "unable_to_activate_internet": 0.006666666666666667,
+                "unable_to_connect_multiple_devices": 0.006666666666666667,
+                "resolution_time_concern": 0.006666666666666667
+              },
+              "labels_routed_over_half": [
+                "poor_performance_complaint"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.9155555555555556,
+              0.9639506172839506
+            ],
+            "selective_accuracy_ci": [
+              0.9781769582618639,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.456,
+            "draws_where_cut_unreachable": 0
+          }
+        },
+        "99.9": {
+          "status": "fitted",
+          "global_cut_nats": 12.496477683034565,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.9644444444444444,
+                "selective_accuracy": 1.0,
+                "errors_total": 141,
+                "errors_caught": 141,
+                "errors_residual": 0,
+                "residual_error_rate": 0.0
+              },
+              "test": {
+                "ask_rate": 0.9607407407407408,
+                "selective_accuracy": 1.0,
+                "errors_total": 138,
+                "errors_caught": 138,
+                "errors_residual": 0,
+                "residual_error_rate": 0.0
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.9553086419753086,
+                  0.9654382716049383
+                ],
+                "selective_accuracy": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.37037037037036535
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.07679012345679012,
+                "selective_accuracy": 0.9991976464295266,
+                "errors_total": 141,
+                "errors_caught": 138,
+                "errors_residual": 3,
+                "residual_error_rate": 0.0007407407407407407
+              },
+              "test": {
+                "ask_rate": 0.08123456790123457,
+                "selective_accuracy": 0.9983875302338081,
+                "errors_total": 138,
+                "errors_caught": 132,
+                "errors_residual": 6,
+                "residual_error_rate": 0.0014814814814814814
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.0745679012345679,
+                  0.08790123456790123
+                ],
+                "selective_accuracy": [
+                  0.9970269667151599,
+                  0.9994648113459995
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.44444444444444453,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.00799248831587307,
+                "unable_to_work_due_to_service_issues": 2.3758704338423113,
+                "lagging_issues": 1.8240169206302537,
+                "poor_performance_complaint": 7.132145775676932,
+                "glitching_issue": 2.6617632409506737,
+                "technician_visits_mentioned": 0.054474914684943476,
+                "poor_service_quality_complaint": 2.728425872242636,
+                "throughput_issues_mentioned": 0.018043966318887605,
+                "receiving_error_messages": 0.011835840350504112,
+                "remove_phone_lines_requested": 5.413574200579265,
+                "phone_purchase_upgrade_requested": 6.337910257155393,
+                "issue_inside_building_mentioned": 6.085007494966524,
+                "issue_outside_building_mentioned": 4.005296139613536,
+                "sim_memory_issues_mentioned": 4.4132785906704495,
+                "app_issue_mentioned": 0.018308723010425076,
+                "unknown_charges_on_bill": 4.688782066841229,
+                "credit_requested": 1.0773239438350632,
+                "credit_applied_by_agent": 1.0344965383261093,
+                "phone_service_issue": 4.1969926995044124,
+                "smart_home_manager_issue": 0.12664281021035872,
+                "sales_attempt_by_agent": 12.496477683034565,
+                "agent_attempted_resolution": 0.7746233658340439,
+                "multiple_contacts_same_issue": 4.064832580601956,
+                "fiber_line_issue_mentioned": 4.8067103086333285,
+                "unable_to_activate_internet": 4.688386838640066,
+                "unable_to_connect_multiple_devices": 4.081234952111552,
+                "resolution_time_concern": 0.44414231320986985
+              },
+              "distinct_cuts": 27,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.006666666666666667,
+                "lagging_issues": 0.006666666666666667,
+                "poor_performance_complaint": 0.7933333333333333,
+                "glitching_issue": 0.0,
+                "technician_visits_mentioned": 0.0,
+                "poor_service_quality_complaint": 0.18,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.0,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.12666666666666668,
+                "issue_inside_building_mentioned": 0.02,
+                "issue_outside_building_mentioned": 0.0,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.0,
+                "unknown_charges_on_bill": 0.006666666666666667,
+                "credit_requested": 0.02,
+                "credit_applied_by_agent": 0.03333333333333333,
+                "phone_service_issue": 0.04666666666666667,
+                "smart_home_manager_issue": 0.0,
+                "sales_attempt_by_agent": 0.47333333333333333,
+                "agent_attempted_resolution": 0.006666666666666667,
+                "multiple_contacts_same_issue": 0.4533333333333333,
+                "fiber_line_issue_mentioned": 0.0,
+                "unable_to_activate_internet": 0.006666666666666667,
+                "unable_to_connect_multiple_devices": 0.006666666666666667,
+                "resolution_time_concern": 0.006666666666666667
+              },
+              "labels_routed_over_half": [
+                "poor_performance_complaint"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.922716049382716,
+              0.9649382716049383
+            ],
+            "selective_accuracy_ci": [
+              0.9828752412559432,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.673,
+            "draws_where_cut_unreachable": 0
+          }
+        }
+      },
+      "cost_per_1000_decisions": {
+        "no gate": {
+          "1": 34.074074074074076,
+          "3": 102.22222222222223,
+          "10": 340.74074074074076,
+          "30": 1022.2222222222223,
+          "100": 3407.407407407408,
+          "300": 10222.222222222223,
+          "1000": 34074.07407407407
+        },
+        "99% global": {
+          "1": 927.6543209876543,
+          "3": 929.1358024691358,
+          "10": 934.320987654321,
+          "30": 949.1358024691359,
+          "100": 1000.9876543209876,
+          "300": 1149.1358024691358,
+          "1000": 1667.6543209876545
+        },
+        "99% per-label": {
+          "1": 62.22222222222222,
+          "3": 79.01234567901234,
+          "10": 137.77777777777777,
+          "30": 305.67901234567904,
+          "100": 893.3333333333333,
+          "300": 2572.345679012346,
+          "1000": 8448.888888888889
+        },
+        "99.5% global": {
+          "1": 930.1234567901234,
+          "3": 931.1111111111111,
+          "10": 934.5679012345679,
+          "30": 944.4444444444445,
+          "100": 979.0123456790122,
+          "300": 1077.7777777777778,
+          "1000": 1423.4567901234568
+        },
+        "99.5% per-label": {
+          "1": 70.61728395061729,
+          "3": 78.0246913580247,
+          "10": 103.95061728395062,
+          "30": 178.0246913580247,
+          "100": 437.283950617284,
+          "300": 1178.0246913580247,
+          "1000": 3770.6172839506175
+        },
+        "99.9% global": {
+          "1": 960.7407407407408,
+          "3": 960.7407407407408,
+          "10": 960.7407407407408,
+          "30": 960.7407407407408,
+          "100": 960.7407407407408,
+          "300": 960.7407407407408,
+          "1000": 960.7407407407408
+        },
+        "99.9% per-label": {
+          "1": 82.71604938271605,
+          "3": 85.67901234567901,
+          "10": 96.04938271604938,
+          "30": 125.67901234567901,
+          "100": 229.3827160493827,
+          "300": 525.679012345679,
+          "1000": 1562.716049382716
+        }
+      }
+    },
+    "modernbert_zero_shot": {
+      "label": "ModernBERT zero-shot",
+      "validation_accuracy": 0.9629629629629629,
+      "validation_errors": 150,
+      "test_accuracy": 0.9641975308641976,
+      "test_errors": 145,
+      "auroc_margin_vs_correct_test": 0.9427330124950329,
+      "auroc_margin_vs_correct_test_ci": [
+        0.9306286499364482,
+        0.9540855659953932
+      ],
+      "test_errors_median_margin_nats": 1.2420011151692743,
+      "test_errors_share_at_least_2_nats": 0.2482758620689655,
+      "ece_test_by_bins": {
+        "10": 0.04366460104691358,
+        "15": 0.04410334662222225,
+        "20": 0.04471580444444445
+      },
+      "per_label": [
+        {
+          "attribute": "reset_equipment_mentioned",
+          "threshold": 0.24,
+          "validation_positives": 47,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 50,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_work_due_to_service_issues",
+          "threshold": 0.5,
+          "validation_positives": 23,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 18,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "lagging_issues",
+          "threshold": 0.94,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 23,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "poor_performance_complaint",
+          "threshold": 0.95,
+          "validation_positives": 56,
+          "validation_errors": 35,
+          "validation_false_negatives": 0,
+          "test_positives": 54,
+          "test_errors": 34,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "glitching_issue",
+          "threshold": 0.86,
+          "validation_positives": 45,
+          "validation_errors": 1,
+          "validation_false_negatives": 0,
+          "test_positives": 31,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "technician_visits_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 30,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 24,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "poor_service_quality_complaint",
+          "threshold": 0.94,
+          "validation_positives": 63,
+          "validation_errors": 22,
+          "validation_false_negatives": 0,
+          "test_positives": 63,
+          "test_errors": 19,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "throughput_issues_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 23,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "receiving_error_messages",
+          "threshold": 0.61,
+          "validation_positives": 48,
+          "validation_errors": 6,
+          "validation_false_negatives": 2,
+          "test_positives": 57,
+          "test_errors": 6,
+          "test_false_negatives": 1
+        },
+        {
+          "attribute": "remove_phone_lines_requested",
+          "threshold": 0.5,
+          "validation_positives": 21,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 13,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "phone_purchase_upgrade_requested",
+          "threshold": 0.07,
+          "validation_positives": 16,
+          "validation_errors": 7,
+          "validation_false_negatives": 7,
+          "test_positives": 21,
+          "test_errors": 4,
+          "test_false_negatives": 4
+        },
+        {
+          "attribute": "issue_inside_building_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 60,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 64,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "issue_outside_building_mentioned",
+          "threshold": 0.08,
+          "validation_positives": 36,
+          "validation_errors": 7,
+          "validation_false_negatives": 7,
+          "test_positives": 38,
+          "test_errors": 2,
+          "test_false_negatives": 2
+        },
+        {
+          "attribute": "sim_memory_issues_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 16,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 15,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "app_issue_mentioned",
+          "threshold": 0.13,
+          "validation_positives": 60,
+          "validation_errors": 31,
+          "validation_false_negatives": 27,
+          "test_positives": 51,
+          "test_errors": 27,
+          "test_false_negatives": 25
+        },
+        {
+          "attribute": "unknown_charges_on_bill",
+          "threshold": 0.5,
+          "validation_positives": 35,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 34,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "credit_requested",
+          "threshold": 0.08,
+          "validation_positives": 54,
+          "validation_errors": 1,
+          "validation_false_negatives": 1,
+          "test_positives": 55,
+          "test_errors": 1,
+          "test_false_negatives": 1
+        },
+        {
+          "attribute": "credit_applied_by_agent",
+          "threshold": 0.5,
+          "validation_positives": 28,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 16,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "phone_service_issue",
+          "threshold": 0.94,
+          "validation_positives": 49,
+          "validation_errors": 4,
+          "validation_false_negatives": 0,
+          "test_positives": 45,
+          "test_errors": 9,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "smart_home_manager_issue",
+          "threshold": 0.5,
+          "validation_positives": 28,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 30,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "sales_attempt_by_agent",
+          "threshold": 0.05,
+          "validation_positives": 40,
+          "validation_errors": 25,
+          "validation_false_negatives": 25,
+          "test_positives": 37,
+          "test_errors": 31,
+          "test_false_negatives": 31
+        },
+        {
+          "attribute": "agent_attempted_resolution",
+          "threshold": 0.95,
+          "validation_positives": 128,
+          "validation_errors": 10,
+          "validation_false_negatives": 0,
+          "test_positives": 129,
+          "test_errors": 10,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "multiple_contacts_same_issue",
+          "threshold": 0.92,
+          "validation_positives": 41,
+          "validation_errors": 1,
+          "validation_false_negatives": 0,
+          "test_positives": 43,
+          "test_errors": 2,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "fiber_line_issue_mentioned",
+          "threshold": 0.5,
+          "validation_positives": 19,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 18,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_activate_internet",
+          "threshold": 0.5,
+          "validation_positives": 32,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 31,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "unable_to_connect_multiple_devices",
+          "threshold": 0.65,
+          "validation_positives": 29,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 33,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        },
+        {
+          "attribute": "resolution_time_concern",
+          "threshold": 0.5,
+          "validation_positives": 57,
+          "validation_errors": 0,
+          "validation_false_negatives": 0,
+          "test_positives": 52,
+          "test_errors": 0,
+          "test_false_negatives": 0
+        }
+      ],
+      "gates": {
+        "99": {
+          "status": "fitted",
+          "global_cut_nats": 1.8569952902992168,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.10444444444444445,
+                "selective_accuracy": 0.9900744416873449,
+                "errors_total": 150,
+                "errors_caught": 114,
+                "errors_residual": 36,
+                "residual_error_rate": 0.008888888888888889
+              },
+              "test": {
+                "ask_rate": 0.10419753086419753,
+                "selective_accuracy": 0.9884233737596472,
+                "errors_total": 145,
+                "errors_caught": 103,
+                "errors_residual": 42,
+                "residual_error_rate": 0.01037037037037037
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.09554938271604939,
+                  0.11308641975308642
+                ],
+                "selective_accuracy": [
+                  0.9845687517222376,
+                  0.992065771956187
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.024691358024692134
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.05728395061728395,
+                "selective_accuracy": 0.9900471451021478,
+                "errors_total": 150,
+                "errors_caught": 112,
+                "errors_residual": 38,
+                "residual_error_rate": 0.009382716049382716
+              },
+              "test": {
+                "ask_rate": 0.06123456790123457,
+                "selective_accuracy": 0.9886901630720674,
+                "errors_total": 145,
+                "errors_caught": 102,
+                "errors_residual": 43,
+                "residual_error_rate": 0.010617283950617284
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.0545679012345679,
+                  0.06741358024691357
+                ],
+                "selective_accuracy": [
+                  0.9850389769986057,
+                  0.9923765960346995
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.39506172839506165,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.04248395510339398,
+                "unable_to_work_due_to_service_issues": 1.8569952902992168,
+                "lagging_issues": 0.014717583082953567,
+                "poor_performance_complaint": 1.8569952902992168,
+                "glitching_issue": 0.01669133740094475,
+                "technician_visits_mentioned": 1.8569952902992168,
+                "poor_service_quality_complaint": 1.8569952902992168,
+                "throughput_issues_mentioned": 1.8569952902992168,
+                "receiving_error_messages": 1.6552950921603766,
+                "remove_phone_lines_requested": 1.8569952902992168,
+                "phone_purchase_upgrade_requested": 1.8569952902992168,
+                "issue_inside_building_mentioned": 1.8569952902992168,
+                "issue_outside_building_mentioned": 1.6144239253424044,
+                "sim_memory_issues_mentioned": 1.8569952902992168,
+                "app_issue_mentioned": 1.8569952902992168,
+                "unknown_charges_on_bill": 1.8569952902992168,
+                "credit_requested": 0.6353766892848611,
+                "credit_applied_by_agent": 1.8569952902992168,
+                "phone_service_issue": 1.2442953510081693,
+                "smart_home_manager_issue": 1.561014137867706,
+                "sales_attempt_by_agent": 1.8149685480598654,
+                "agent_attempted_resolution": 1.5543847258845855,
+                "multiple_contacts_same_issue": 0.06732014264701025,
+                "fiber_line_issue_mentioned": 1.8569952902992168,
+                "unable_to_activate_internet": 1.8569952902992168,
+                "unable_to_connect_multiple_devices": 0.020985359386699876,
+                "resolution_time_concern": 1.8569952902992168
+              },
+              "distinct_cuts": 13,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.0,
+                "lagging_issues": 0.0,
+                "poor_performance_complaint": 0.2,
+                "glitching_issue": 0.0,
+                "technician_visits_mentioned": 0.0,
+                "poor_service_quality_complaint": 0.08,
+                "throughput_issues_mentioned": 0.0,
+                "receiving_error_messages": 0.17333333333333334,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.14,
+                "issue_inside_building_mentioned": 0.006666666666666667,
+                "issue_outside_building_mentioned": 0.07333333333333333,
+                "sim_memory_issues_mentioned": 0.0,
+                "app_issue_mentioned": 0.32,
+                "unknown_charges_on_bill": 0.0,
+                "credit_requested": 0.013333333333333334,
+                "credit_applied_by_agent": 0.0,
+                "phone_service_issue": 0.12666666666666668,
+                "smart_home_manager_issue": 0.02,
+                "sales_attempt_by_agent": 0.22666666666666666,
+                "agent_attempted_resolution": 0.26,
+                "multiple_contacts_same_issue": 0.013333333333333334,
+                "fiber_line_issue_mentioned": 0.0,
+                "unable_to_activate_internet": 0.0,
+                "unable_to_connect_multiple_devices": 0.0,
+                "resolution_time_concern": 0.0
+              },
+              "labels_routed_over_half": []
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.08320987654320988,
+              0.13927777777777775
+            ],
+            "selective_accuracy_ci": [
+              0.9844726457388632,
+              0.9935488089714708
+            ],
+            "share_of_draws_meeting_target_on_test": 0.346,
+            "draws_where_cut_unreachable": 0
+          }
+        },
+        "99.5": {
+          "status": "fitted",
+          "global_cut_nats": 2.6737163887567865,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.18098765432098765,
+                "selective_accuracy": 0.9951763641845041,
+                "errors_total": 150,
+                "errors_caught": 134,
+                "errors_residual": 16,
+                "residual_error_rate": 0.003950617283950617
+              },
+              "test": {
+                "ask_rate": 0.17901234567901234,
+                "selective_accuracy": 0.996390977443609,
+                "errors_total": 145,
+                "errors_caught": 133,
+                "errors_residual": 12,
+                "residual_error_rate": 0.002962962962962963
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.1674074074074074,
+                  0.1908641975308642
+                ],
+                "selective_accuracy": [
+                  0.9943427927615249,
+                  0.9982357405550344
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.19753086419753152
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.07358024691358024,
+                "selective_accuracy": 0.9952025586353944,
+                "errors_total": 150,
+                "errors_caught": 132,
+                "errors_residual": 18,
+                "residual_error_rate": 0.0044444444444444444
+              },
+              "test": {
+                "ask_rate": 0.07654320987654321,
+                "selective_accuracy": 0.9954545454545455,
+                "errors_total": 145,
+                "errors_caught": 128,
+                "errors_residual": 17,
+                "residual_error_rate": 0.004197530864197531
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.06888888888888889,
+                  0.08395061728395062
+                ],
+                "selective_accuracy": [
+                  0.9933420328924271,
+                  0.9975961538461539
+                ]
+              },
+              "validation_to_test_ask_gap_points": 0.2962962962962973,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.04248395510339398,
+                "unable_to_work_due_to_service_issues": 2.6737163887567865,
+                "lagging_issues": 0.014717583082953567,
+                "poor_performance_complaint": 2.367585621918427,
+                "glitching_issue": 0.01669133740094475,
+                "technician_visits_mentioned": 2.6737163887567865,
+                "poor_service_quality_complaint": 2.6737163887567865,
+                "throughput_issues_mentioned": 2.6737163887567865,
+                "receiving_error_messages": 2.281758729139871,
+                "remove_phone_lines_requested": 2.6737163887567865,
+                "phone_purchase_upgrade_requested": 1.9519048271316266,
+                "issue_inside_building_mentioned": 2.6737163887567865,
+                "issue_outside_building_mentioned": 2.2237469759497035,
+                "sim_memory_issues_mentioned": 2.6471085271085606,
+                "app_issue_mentioned": 2.635340269946691,
+                "unknown_charges_on_bill": 2.6737163887567865,
+                "credit_requested": 0.6353766892848611,
+                "credit_applied_by_agent": 2.6737163887567865,
+                "phone_service_issue": 1.2442953510081693,
+                "smart_home_manager_issue": 1.561014137867706,
+                "sales_attempt_by_agent": 1.8149685480598654,
+                "agent_attempted_resolution": 1.1322053077808485,
+                "multiple_contacts_same_issue": 0.9525341826562141,
+                "fiber_line_issue_mentioned": 2.6737163887567865,
+                "unable_to_activate_internet": 2.6737163887567865,
+                "unable_to_connect_multiple_devices": 0.020985359386699876,
+                "resolution_time_concern": 2.6737163887567865
+              },
+              "distinct_cuts": 17,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.0,
+                "lagging_issues": 0.0,
+                "poor_performance_complaint": 0.25333333333333335,
+                "glitching_issue": 0.0,
+                "technician_visits_mentioned": 0.0,
+                "poor_service_quality_complaint": 0.14666666666666667,
+                "throughput_issues_mentioned": 0.006666666666666667,
+                "receiving_error_messages": 0.26,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.14,
+                "issue_inside_building_mentioned": 0.006666666666666667,
+                "issue_outside_building_mentioned": 0.17333333333333334,
+                "sim_memory_issues_mentioned": 0.013333333333333334,
+                "app_issue_mentioned": 0.4866666666666667,
+                "unknown_charges_on_bill": 0.0,
+                "credit_requested": 0.013333333333333334,
+                "credit_applied_by_agent": 0.0,
+                "phone_service_issue": 0.12666666666666668,
+                "smart_home_manager_issue": 0.02,
+                "sales_attempt_by_agent": 0.22666666666666666,
+                "agent_attempted_resolution": 0.1,
+                "multiple_contacts_same_issue": 0.09333333333333334,
+                "fiber_line_issue_mentioned": 0.0,
+                "unable_to_activate_internet": 0.0,
+                "unable_to_connect_multiple_devices": 0.0,
+                "resolution_time_concern": 0.0
+              },
+              "labels_routed_over_half": []
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.1281358024691358,
+              0.22692592592592592
+            ],
+            "selective_accuracy_ci": [
+              0.9908504919726993,
+              0.9990730009436355
+            ],
+            "share_of_draws_meeting_target_on_test": 0.72,
+            "draws_where_cut_unreachable": 0
+          }
+        },
+        "99.9": {
+          "status": "fitted",
+          "global_cut_nats": 3.4430946046125266,
+          "variants": {
+            "global": {
+              "validation": {
+                "ask_rate": 0.27382716049382716,
+                "selective_accuracy": 0.9993199591975519,
+                "errors_total": 150,
+                "errors_caught": 148,
+                "errors_residual": 2,
+                "residual_error_rate": 0.0004938271604938272
+              },
+              "test": {
+                "ask_rate": 0.26839506172839506,
+                "selective_accuracy": 0.9996625042186973,
+                "errors_total": 145,
+                "errors_caught": 144,
+                "errors_residual": 1,
+                "residual_error_rate": 0.0002469135802469136
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.25357407407407406,
+                  0.2822222222222222
+                ],
+                "selective_accuracy": [
+                  0.9989746831935373,
+                  1.0
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.5432098765432103
+            },
+            "per-label": {
+              "validation": {
+                "ask_rate": 0.10567901234567902,
+                "selective_accuracy": 0.9991717283268913,
+                "errors_total": 150,
+                "errors_caught": 147,
+                "errors_residual": 3,
+                "residual_error_rate": 0.0007407407407407407
+              },
+              "test": {
+                "ask_rate": 0.1037037037037037,
+                "selective_accuracy": 0.9983471074380166,
+                "errors_total": 145,
+                "errors_caught": 139,
+                "errors_residual": 6,
+                "residual_error_rate": 0.0014814814814814814
+              },
+              "test_ci_fixed_cuts": {
+                "ask_rate": [
+                  0.09505555555555556,
+                  0.1116111111111111
+                ],
+                "selective_accuracy": [
+                  0.9969721575905799,
+                  0.9994504022358516
+                ]
+              },
+              "validation_to_test_ask_gap_points": -0.19753086419753152,
+              "cuts_nats": {
+                "reset_equipment_mentioned": 0.04248395510339398,
+                "unable_to_work_due_to_service_issues": 3.4430946046125266,
+                "lagging_issues": 0.014717583082953567,
+                "poor_performance_complaint": 2.293764994182021,
+                "glitching_issue": 0.43804605931956964,
+                "technician_visits_mentioned": 3.4430946046125266,
+                "poor_service_quality_complaint": 3.4430946046125266,
+                "throughput_issues_mentioned": 2.9247414756714765,
+                "receiving_error_messages": 2.281758729139871,
+                "remove_phone_lines_requested": 3.4430946046125266,
+                "phone_purchase_upgrade_requested": 1.9519048271316266,
+                "issue_inside_building_mentioned": 3.05809109767466,
+                "issue_outside_building_mentioned": 2.897735884514324,
+                "sim_memory_issues_mentioned": 2.6471085271085606,
+                "app_issue_mentioned": 3.4338214898244335,
+                "unknown_charges_on_bill": 2.864169900347973,
+                "credit_requested": 0.6353766892848611,
+                "credit_applied_by_agent": 3.4430946046125266,
+                "phone_service_issue": 1.2442953510081693,
+                "smart_home_manager_issue": 1.561014137867706,
+                "sales_attempt_by_agent": 1.8149685480598654,
+                "agent_attempted_resolution": 1.5543847258845855,
+                "multiple_contacts_same_issue": 0.9525341826562141,
+                "fiber_line_issue_mentioned": 3.4430946046125266,
+                "unable_to_activate_internet": 3.4430946046125266,
+                "unable_to_connect_multiple_devices": 0.020985359386699876,
+                "resolution_time_concern": 3.4110499320606524
+              },
+              "distinct_cuts": 21,
+              "test_ask_rate_by_label": {
+                "reset_equipment_mentioned": 0.0,
+                "unable_to_work_due_to_service_issues": 0.0,
+                "lagging_issues": 0.0,
+                "poor_performance_complaint": 0.24666666666666667,
+                "glitching_issue": 0.013333333333333334,
+                "technician_visits_mentioned": 0.0,
+                "poor_service_quality_complaint": 0.32,
+                "throughput_issues_mentioned": 0.006666666666666667,
+                "receiving_error_messages": 0.26,
+                "remove_phone_lines_requested": 0.0,
+                "phone_purchase_upgrade_requested": 0.14,
+                "issue_inside_building_mentioned": 0.006666666666666667,
+                "issue_outside_building_mentioned": 0.38,
+                "sim_memory_issues_mentioned": 0.013333333333333334,
+                "app_issue_mentioned": 0.6733333333333333,
+                "unknown_charges_on_bill": 0.0,
+                "credit_requested": 0.013333333333333334,
+                "credit_applied_by_agent": 0.0,
+                "phone_service_issue": 0.12666666666666668,
+                "smart_home_manager_issue": 0.02,
+                "sales_attempt_by_agent": 0.22666666666666666,
+                "agent_attempted_resolution": 0.26,
+                "multiple_contacts_same_issue": 0.09333333333333334,
+                "fiber_line_issue_mentioned": 0.0,
+                "unable_to_activate_internet": 0.0,
+                "unable_to_connect_multiple_devices": 0.0,
+                "resolution_time_concern": 0.0
+              },
+              "labels_routed_over_half": [
+                "app_issue_mentioned"
+              ]
+            }
+          },
+          "pipeline_bootstrap_global": {
+            "ask_rate_ci": [
+              0.22787654320987655,
+              0.32643827160493827
+            ],
+            "selective_accuracy_ci": [
+              0.9983432462255645,
+              1.0
+            ],
+            "share_of_draws_meeting_target_on_test": 0.877,
+            "draws_where_cut_unreachable": 0
+          }
+        }
+      },
+      "cost_per_1000_decisions": {
+        "no gate": {
+          "1": 35.80246913580247,
+          "3": 107.4074074074074,
+          "10": 358.0246913580247,
+          "30": 1074.0740740740741,
+          "100": 3580.2469135802467,
+          "300": 10740.74074074074,
+          "1000": 35802.469135802465
+        },
+        "99% global": {
+          "1": 114.5679012345679,
+          "3": 135.30864197530866,
+          "10": 207.9012345679012,
+          "30": 415.30864197530866,
+          "100": 1141.2345679012346,
+          "300": 3215.3086419753085,
+          "1000": 10474.567901234568
+        },
+        "99% per-label": {
+          "1": 71.85185185185186,
+          "3": 93.08641975308643,
+          "10": 167.40740740740742,
+          "30": 379.75308641975306,
+          "100": 1122.962962962963,
+          "300": 3246.41975308642,
+          "1000": 10678.51851851852
+        },
+        "99.5% global": {
+          "1": 181.97530864197532,
+          "3": 187.9012345679012,
+          "10": 208.64197530864195,
+          "30": 267.9012345679012,
+          "100": 475.30864197530866,
+          "300": 1067.9012345679012,
+          "1000": 3141.975308641975
+        },
+        "99.5% per-label": {
+          "1": 80.74074074074075,
+          "3": 89.1358024691358,
+          "10": 118.51851851851852,
+          "30": 202.46913580246917,
+          "100": 496.2962962962963,
+          "300": 1335.8024691358025,
+          "1000": 4274.074074074074
+        },
+        "99.9% global": {
+          "1": 268.641975308642,
+          "3": 269.1358024691358,
+          "10": 270.8641975308642,
+          "30": 275.8024691358025,
+          "100": 293.08641975308643,
+          "300": 342.4691358024691,
+          "1000": 515.3086419753087
+        },
+        "99.9% per-label": {
+          "1": 105.18518518518519,
+          "3": 108.14814814814815,
+          "10": 118.5185185185185,
+          "30": 148.14814814814815,
+          "100": 251.85185185185182,
+          "300": 548.1481481481482,
+          "1000": 1585.185185185185
+        }
+      }
+    }
+  },
+  "hosted_diagnostic": [
+    {
+      "system": "JEV Noul, 0.50",
+      "test_accuracy": 0.9925925925925926,
+      "test_errors": 30,
+      "false_positive_share_of_errors": 1.0,
+      "errors_at_least_2_nats": 12,
+      "errors_at_least_4_nats": 0,
+      "errors_on_threshold": 3,
+      "distinct_probability_values_test": 68,
+      "labels_with_threshold_above_0_50": 0,
+      "validation_probabilities": "committed"
+    },
+    {
+      "system": "JEV Noul, validation-calibrated",
+      "test_accuracy": 0.9990123456790123,
+      "test_errors": 4,
+      "false_positive_share_of_errors": 1.0,
+      "errors_at_least_2_nats": 0,
+      "errors_at_least_4_nats": 0,
+      "errors_on_threshold": 3,
+      "distinct_probability_values_test": 68,
+      "labels_with_threshold_above_0_50": 2,
+      "validation_probabilities": "committed"
+    },
+    {
+      "system": "JEV Choice, 0.50",
+      "test_accuracy": 0.9439506172839506,
+      "test_errors": 227,
+      "false_positive_share_of_errors": 1.0,
+      "errors_at_least_2_nats": 155,
+      "errors_at_least_4_nats": 119,
+      "errors_on_threshold": 2,
+      "distinct_probability_values_test": 91,
+      "labels_with_threshold_above_0_50": 0,
+      "validation_probabilities": "none"
+    }
+  ],
+  "adjudication_sample": [
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 171,
+      "attribute": "receiving_error_messages",
+      "gold": 1,
+      "model_p": 0.14577088,
+      "threshold": 0.61,
+      "margin": 2.2154689781036767,
+      "gold_supported": true,
+      "span": "I keep receiving the message \u201cService unavailable.\u201d",
+      "second_reader_blind_first_answer_matched": null,
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 380,
+      "attribute": "poor_service_quality_complaint",
+      "gold": 0,
+      "model_p": 0.97902083,
+      "threshold": 0.94,
+      "margin": 1.091456524311532,
+      "gold_supported": true,
+      "span": "The overall performance has been poor.",
+      "second_reader_blind_first_answer_matched": "model",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 191,
+      "attribute": "poor_performance_complaint",
+      "gold": 0,
+      "model_p": 0.99090779,
+      "threshold": 0.95,
+      "margin": 1.7466744785863075,
+      "gold_supported": true,
+      "span": "I am unhappy with the poor service quality.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 971,
+      "attribute": "sales_attempt_by_agent",
+      "gold": 1,
+      "model_p": 0.04962404,
+      "threshold": 0.05,
+      "margin": 0.00794312884045345,
+      "gold_supported": true,
+      "span": "I can offer a discounted premium-support package.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 708,
+      "attribute": "poor_performance_complaint",
+      "gold": 0,
+      "model_p": 0.98551327,
+      "threshold": 0.95,
+      "margin": 1.2754414901550777,
+      "gold_supported": true,
+      "span": "I am unhappy with the poor service quality.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 577,
+      "attribute": "poor_performance_complaint",
+      "gold": 0,
+      "model_p": 0.98404944,
+      "threshold": 0.95,
+      "margin": 1.1777004938128122,
+      "gold_supported": true,
+      "span": "I am unhappy with the poor service quality.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 537,
+      "attribute": "phone_service_issue",
+      "gold": 0,
+      "model_p": 0.96943665,
+      "threshold": 0.94,
+      "margin": 0.705362153670007,
+      "gold_supported": true,
+      "span": "Video calls and online sessions keep lagging.",
+      "second_reader_blind_first_answer_matched": "model",
+      "second_reader_final": "key right",
+      "second_reader_note": "criterion wording: 'calling problems' can be read to cover 'video calls keep lagging'"
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 680,
+      "attribute": "sales_attempt_by_agent",
+      "gold": 1,
+      "model_p": 0.02549582,
+      "threshold": 0.05,
+      "margin": 0.6989560639768571,
+      "gold_supported": true,
+      "span": "I can offer a discounted premium-support package.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 465,
+      "attribute": "poor_service_quality_complaint",
+      "gold": 0,
+      "model_p": 0.99499846,
+      "threshold": 0.94,
+      "margin": 2.5412767006557107,
+      "gold_supported": true,
+      "span": "The overall performance has been poor.",
+      "second_reader_blind_first_answer_matched": "model",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 955,
+      "attribute": "app_issue_mentioned",
+      "gold": 1,
+      "model_p": 0.12770016,
+      "threshold": 0.13,
+      "margin": 0.02048929928322729,
+      "gold_supported": true,
+      "span": "The account app is not working correctly.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 332,
+      "attribute": "sales_attempt_by_agent",
+      "gold": 1,
+      "model_p": 0.04158451,
+      "threshold": 0.05,
+      "margin": 0.1931106116923429,
+      "gold_supported": true,
+      "span": "I can offer a discounted premium-support package.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 123,
+      "attribute": "phone_service_issue",
+      "gold": 0,
+      "model_p": 0.96965665,
+      "threshold": 0.94,
+      "margin": 0.7128130219868227,
+      "gold_supported": true,
+      "span": "Video calls and online sessions keep lagging.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": "criterion wording: 'calling problems' can be read to cover 'video calls keep lagging'"
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 635,
+      "attribute": "app_issue_mentioned",
+      "gold": 1,
+      "model_p": 0.02000698,
+      "threshold": 0.13,
+      "margin": 1.9904630572909583,
+      "gold_supported": true,
+      "span": "The account app is not working correctly.",
+      "second_reader_blind_first_answer_matched": "model",
+      "second_reader_final": "key right",
+      "second_reader_note": "the app sentence is one short line the call never returns to"
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 171,
+      "attribute": "poor_service_quality_complaint",
+      "gold": 0,
+      "model_p": 0.99290931,
+      "threshold": 0.94,
+      "margin": 2.190196951334014,
+      "gold_supported": true,
+      "span": "The overall performance has been poor.",
+      "second_reader_blind_first_answer_matched": "model",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 591,
+      "attribute": "poor_service_quality_complaint",
+      "gold": 0,
+      "model_p": 0.96565908,
+      "threshold": 0.94,
+      "margin": 0.5849254125055929,
+      "gold_supported": true,
+      "span": "The overall performance has been poor.",
+      "second_reader_blind_first_answer_matched": "model",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 956,
+      "attribute": "poor_service_quality_complaint",
+      "gold": 0,
+      "model_p": 0.99436039,
+      "threshold": 0.94,
+      "margin": 2.4205887859757813,
+      "gold_supported": true,
+      "span": "The overall performance has been poor.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 758,
+      "attribute": "app_issue_mentioned",
+      "gold": 1,
+      "model_p": 0.03115009,
+      "threshold": 0.13,
+      "margin": 1.5363092854688913,
+      "gold_supported": true,
+      "span": "The account app is not working correctly.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 798,
+      "attribute": "poor_performance_complaint",
+      "gold": 0,
+      "model_p": 0.96758705,
+      "threshold": 0.95,
+      "margin": 0.4517975108260659,
+      "gold_supported": true,
+      "span": "I am unhappy with the poor service quality.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 659,
+      "attribute": "app_issue_mentioned",
+      "gold": 1,
+      "model_p": 0.01709209,
+      "threshold": 0.13,
+      "margin": 2.150889943930074,
+      "gold_supported": true,
+      "span": "The account app is not working correctly.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    },
+    {
+      "system": "ModernBERT zero-shot",
+      "conversation_id": 425,
+      "attribute": "sales_attempt_by_agent",
+      "gold": 1,
+      "model_p": 0.01554941,
+      "threshold": 0.05,
+      "margin": 1.2035776878669768,
+      "gold_supported": true,
+      "span": "I can offer a discounted premium-support package.",
+      "second_reader_blind_first_answer_matched": "key",
+      "second_reader_final": "key right",
+      "second_reader_note": null
+    }
+  ]
+}
