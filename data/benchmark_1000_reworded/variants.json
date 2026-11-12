@@ -1,0 +1,530 @@
+{
+ "meta": {
+  "version": "v2",
+  "written": "2026-11-11",
+  "note": "Written before any model was scored on these sentences. Tier 1 keeps the fact and changes the words; the attribute named must still be present under the benchmark's criteria. Tier 2 sentences sound close to an attribute but do not satisfy its criterion; adding one leaves the gold labels unchanged. N stands for the number carried over from the original sentence; X for the quoted message.",
+  "frozen": "2026-11-11",
+  "review": "Blind review by ear by a second reader, 2026-11-11: each sentence read with the benchmark criterion, intended label withheld until answered. 144 judgments (108 tier-1 variants, 20 tier-2 near misses, 16 negatives used as foils); first answer matched the intended label on 141; the three differences were resolved in favour of the intended label on discussion; one near miss (N05) was judged arguable by its author, rewritten and re-reviewed. No model was scored on any sentence before this freeze."
+ },
+ "tier1": [
+  {
+   "id": "C01",
+   "role": "Caller",
+   "attribute": "poor_service_quality_complaint",
+   "original": "I am unhappy with the poor service quality.",
+   "variants": [
+    "The service quality has been really poor lately.",
+    "The quality of the service I am getting is unacceptable.",
+    "Your service has been unreliable, and I am not happy about it."
+   ]
+  },
+  {
+   "id": "C02",
+   "role": "Caller",
+   "attribute": "app_issue_mentioned",
+   "original": "The account app is not working correctly.",
+   "variants": [
+    "The account app keeps failing on me.",
+    "Your app for managing my account isn't working.",
+    "I can't get the account application to work properly."
+   ]
+  },
+  {
+   "id": "C03",
+   "role": "Caller",
+   "attribute": "issue_inside_building_mentioned",
+   "original": "The problem occurs inside the building.",
+   "variants": [
+    "It happens when I'm inside the building.",
+    "The trouble shows up indoors, inside our building.",
+    "Inside the building is where it acts up."
+   ]
+  },
+  {
+   "id": "C04",
+   "role": "Caller",
+   "attribute": "poor_performance_complaint",
+   "original": "The overall performance has been poor.",
+   "variants": [
+    "Performance has been terrible overall.",
+    "The performance I'm getting is just not acceptable.",
+    "Overall, the performance has been really bad."
+   ]
+  },
+  {
+   "id": "C05",
+   "role": "Caller",
+   "attribute": "credit_requested",
+   "original": "I would like a credit for the disruption.",
+   "variants": [
+    "Can I get a credit on my bill for all this trouble?",
+    "I'm asking for a service credit because of the disruption.",
+    "I think I'm owed a refund for this disruption, and I'd like one."
+   ]
+  },
+  {
+   "id": "C06",
+   "role": "Caller",
+   "attribute": "resolution_time_concern",
+   "original": "How long will it take to resolve this?",
+   "variants": [
+    "When can I expect this to be fixed?",
+    "How much longer until this is sorted out?",
+    "What's the timeline for getting this resolved?"
+   ]
+  },
+  {
+   "id": "C07",
+   "role": "Caller",
+   "attribute": "reset_equipment_mentioned",
+   "original": "I reset the equipment twice, but the problem continued.",
+   "variants": [
+    "I've rebooted the equipment two times and nothing changed.",
+    "I restarted the router twice and it's still happening.",
+    "I already tried resetting the gateway a couple of times, with no luck."
+   ]
+  },
+  {
+   "id": "C08",
+   "role": "Caller",
+   "attribute": "phone_service_issue",
+   "original": "My phone service is not working correctly.",
+   "variants": [
+    "My mobile service isn't working right.",
+    "I'm having trouble with my phone service; calls aren't going through properly.",
+    "My cell phone service keeps failing."
+   ]
+  },
+  {
+   "id": "C09",
+   "role": "Caller",
+   "attribute": "glitching_issue",
+   "original": "The screen keeps glitching and jumping between pages.",
+   "variants": [
+    "The screen glitches and keeps hopping from page to page.",
+    "The display is glitchy and jumps around between screens.",
+    "Pages keep jumping on their own; the screen is glitching."
+   ]
+  },
+  {
+   "id": "C10",
+   "role": "Caller",
+   "attribute": "issue_outside_building_mentioned",
+   "original": "The problem also occurs outside the building.",
+   "variants": [
+    "It also happens when I'm outside the building.",
+    "Outside the building, I see the same problem.",
+    "The same thing happens outdoors, away from the building."
+   ]
+  },
+  {
+   "id": "C11",
+   "role": "Caller",
+   "attribute": "unknown_charges_on_bill",
+   "original": "There is an unfamiliar $N charge on my bill.",
+   "variants": [
+    "I see a $N charge on my bill that I don't recognize.",
+    "My bill has a $N charge I can't account for.",
+    "There's an unexplained $N charge on my statement."
+   ]
+  },
+  {
+   "id": "C12",
+   "role": "Caller",
+   "attribute": "unable_to_connect_multiple_devices",
+   "original": "I cannot connect multiple devices at the same time.",
+   "variants": [
+    "I can't have more than one device connected at once.",
+    "When several devices try to connect together, they can't.",
+    "Multiple devices won't connect at the same time; only one gets online."
+   ]
+  },
+  {
+   "id": "C13",
+   "role": "Caller",
+   "attribute": "unable_to_activate_internet",
+   "original": "I have been unable to activate the internet service.",
+   "variants": [
+    "I haven't been able to activate my internet service.",
+    "My internet service won't activate.",
+    "Activating the internet service keeps failing for me."
+   ]
+  },
+  {
+   "id": "C14",
+   "role": "Caller",
+   "attribute": "smart_home_manager_issue",
+   "original": "The Smart Home Manager is not controlling my connected devices.",
+   "variants": [
+    "Smart Home Manager won't control my connected devices.",
+    "I can't control my connected devices through Smart Home Manager.",
+    "The Smart Home Manager has stopped managing my connected devices."
+   ]
+  },
+  {
+   "id": "C15",
+   "role": "Caller",
+   "attribute": "technician_visits_mentioned",
+   "original": "A technician already visited earlier this week.",
+   "variants": [
+    "A technician came out earlier this week.",
+    "We already had a tech visit a few days ago.",
+    "A service technician was here earlier in the week."
+   ]
+  },
+  {
+   "id": "C16",
+   "role": "Caller",
+   "attribute": "throughput_issues_mentioned",
+   "original": "The download throughput is only about N Mbps.",
+   "variants": [
+    "I'm only getting about N Mbps on downloads.",
+    "My download speed tops out around N Mbps.",
+    "Download throughput is stuck near N Mbps."
+   ]
+  },
+  {
+   "id": "C17",
+   "role": "Caller",
+   "attribute": "lagging_issues",
+   "original": "Video calls and online sessions keep lagging.",
+   "variants": [
+    "My video meetings and online sessions lag constantly.",
+    "There's constant lag on video calls and anything online.",
+    "Online sessions and video calls are laggy all the time."
+   ]
+  },
+  {
+   "id": "C18",
+   "role": "Caller",
+   "attribute": "unable_to_work_due_to_service_issues",
+   "original": "The service problem has left me unable to work today.",
+   "variants": [
+    "Because of the service problem, I couldn't work today.",
+    "I've been unable to work today because of this service issue.",
+    "This service problem has kept me from doing my job today."
+   ]
+  },
+  {
+   "id": "C19",
+   "role": "Caller",
+   "attribute": "phone_purchase_upgrade_requested",
+   "original": "I would like to upgrade my current phone.",
+   "variants": [
+    "I'd like to upgrade the phone I have now.",
+    "I'm interested in upgrading my current phone.",
+    "I want to move up to a newer phone."
+   ]
+  },
+  {
+   "id": "C20",
+   "role": "Caller",
+   "attribute": "fiber_line_issue_mentioned",
+   "original": "The installer said there may be damage to the fiber line.",
+   "variants": [
+    "The installer mentioned the fiber line might be damaged.",
+    "According to the installer, there could be damage to the fiber line.",
+    "I was told by the installer that the fiber line may be damaged."
+   ]
+  },
+  {
+   "id": "C21",
+   "role": "Caller",
+   "attribute": "remove_phone_lines_requested",
+   "original": "I also want to remove the phone line ending in N.",
+   "variants": [
+    "I also want the phone line ending in N removed.",
+    "Please also cancel the line that ends in N.",
+    "I'd also like to disconnect the phone line ending in N."
+   ]
+  },
+  {
+   "id": "C22",
+   "role": "Caller",
+   "attribute": "multiple_contacts_same_issue",
+   "original": "This is my second contact about the same issue.",
+   "variants": [
+    "This is the second time I've contacted you about this same issue.",
+    "I've already called once before about this exact problem.",
+    "It's my second time reaching out about the same issue."
+   ]
+  },
+  {
+   "id": "C23",
+   "role": "Caller",
+   "attribute": "multiple_contacts_same_issue",
+   "original": "This is my third contact about the same issue.",
+   "variants": [
+    "This is the third time I've contacted you about this same issue.",
+    "I've already called twice before about this exact problem.",
+    "It's my third time reaching out about the same issue."
+   ]
+  },
+  {
+   "id": "C24",
+   "role": "Caller",
+   "attribute": "multiple_contacts_same_issue",
+   "original": "This is my fourth contact about the same issue.",
+   "variants": [
+    "This is the fourth time I've contacted you about this same issue.",
+    "I've already called three times before about this exact problem.",
+    "It's my fourth time reaching out about the same issue."
+   ]
+  },
+  {
+   "id": "C25",
+   "role": "Caller",
+   "attribute": "receiving_error_messages",
+   "original": "I keep receiving the message “X.”",
+   "variants": [
+    "I keep getting an error that says “X.”",
+    "The error message “X” keeps popping up.",
+    "Every time I try, it shows me the error “X.”"
+   ]
+  },
+  {
+   "id": "C26",
+   "role": "Caller",
+   "attribute": "sim_memory_issues_mentioned",
+   "original": "The phone displays “SIM memory full.”",
+   "variants": [
+    "My phone shows a “SIM memory full” notice.",
+    "I get “SIM memory full” on the phone's screen.",
+    "The handset keeps saying “SIM memory full.”"
+   ]
+  },
+  {
+   "id": "A01",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I am taking steps to address this now: I am refreshing the connection profile and reprovisioning the gateway.",
+   "variants": [
+    "Let me fix this right away: I'm refreshing your connection profile and reprovisioning the gateway.",
+    "I'm acting on this now by refreshing the connection profile and reprovisioning your gateway.",
+    "Right now I'm reprovisioning the gateway and refreshing the connection profile to address it."
+   ]
+  },
+  {
+   "id": "A02",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I am taking steps to address this now: I am refreshing the mobile network profile and account session.",
+   "variants": [
+    "Let me fix this right away: I'm refreshing your mobile network profile and your account session.",
+    "I'm acting on this now by refreshing the mobile network profile and the account session.",
+    "Right now I'm resetting your account session and refreshing the mobile network profile to address it."
+   ]
+  },
+  {
+   "id": "A03",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I am taking steps to address this now: I am resynchronizing the Smart Home Manager profile and connected-device permissions.",
+   "variants": [
+    "Let me fix this right away: I'm resynchronizing your Smart Home Manager profile and the connected-device permissions.",
+    "I'm acting on this now by resyncing the Smart Home Manager profile and connected-device permissions.",
+    "Right now I'm resynchronizing the connected-device permissions and the Smart Home Manager profile to address it."
+   ]
+  },
+  {
+   "id": "A04",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I am taking steps to address this now: I am opening a billing investigation and checking the account history.",
+   "variants": [
+    "Let me act on this right away: I'm opening a billing investigation and going through the account history.",
+    "I'm acting on this now by opening a billing investigation and reviewing your account history.",
+    "Right now I'm checking the account history and opening a billing investigation to address it."
+   ]
+  },
+  {
+   "id": "A05",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I opened a billing investigation for the unfamiliar charge.",
+   "variants": [
+    "I've opened a billing investigation into the charge you don't recognize.",
+    "A billing investigation is now open for that unfamiliar charge; I just filed it.",
+    "I filed a billing investigation for the unrecognized charge."
+   ]
+  },
+  {
+   "id": "A06",
+   "role": "Agent",
+   "attribute": "credit_applied_by_agent",
+   "original": "I have applied a $N credit to the account.",
+   "variants": [
+    "I've applied a $N credit to your account.",
+    "A $N credit has now been posted to your account; I just applied it.",
+    "I just put a $N credit on the account."
+   ]
+  },
+  {
+   "id": "A07",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I submitted the credit request for billing review.",
+   "variants": [
+    "I've sent the credit request to billing for review.",
+    "Your credit request is now submitted for billing review.",
+    "I filed the request for a credit with the billing review team."
+   ]
+  },
+  {
+   "id": "A08",
+   "role": "Agent",
+   "attribute": "agent_attempted_resolution",
+   "original": "I submitted the request to remove the specified phone line.",
+   "variants": [
+    "I've submitted the request to remove that phone line.",
+    "The request to remove the line you named is now submitted.",
+    "I filed the removal request for the phone line you specified."
+   ]
+  },
+  {
+   "id": "A09",
+   "role": "Agent",
+   "attribute": "sales_attempt_by_agent",
+   "original": "While I have the account open, I can offer a discounted premium-support package.",
+   "variants": [
+    "Before we wrap up, I can add our premium-support package for you at a reduced price.",
+    "Since I'm in your account, would you be interested in a discounted premium-support package?",
+    "I can also sign you up for premium support at a special rate today."
+   ]
+  },
+  {
+   "id": "A10",
+   "role": "Agent",
+   "attribute": "sales_attempt_by_agent",
+   "original": "For that upgrade, I can offer a discounted device-protection plan with the new phone.",
+   "variants": [
+    "With that upgrade, I can add a device-protection plan at a discount for the new phone.",
+    "For the new phone, would you like a discounted device-protection plan?",
+    "I can include a device-protection plan at a reduced price with your upgrade."
+   ]
+  }
+ ],
+ "tier2": [
+  {
+   "id": "N01",
+   "role": "Caller",
+   "near": "poor_performance_complaint",
+   "sentence": "Everything has just been running badly lately."
+  },
+  {
+   "id": "N02",
+   "role": "Caller",
+   "near": "poor_performance_complaint",
+   "sentence": "Things have not been working the way they should."
+  },
+  {
+   "id": "N03",
+   "role": "Caller",
+   "near": "poor_service_quality_complaint",
+   "sentence": "This whole experience has been disappointing."
+  },
+  {
+   "id": "N04",
+   "role": "Caller",
+   "near": "poor_service_quality_complaint",
+   "sentence": "I expected better than this."
+  },
+  {
+   "id": "N05",
+   "role": "Caller",
+   "near": "phone_service_issue",
+   "sentence": "I called from my cell phone to report the internet outage.",
+   "rewritten_from_v1": "I was on the phone with a colleague when the internet dropped."
+  },
+  {
+   "id": "N06",
+   "role": "Caller",
+   "near": "phone_service_issue",
+   "sentence": "I use my phone for work every day."
+  },
+  {
+   "id": "N07",
+   "role": "Caller",
+   "near": "app_issue_mentioned",
+   "sentence": "I checked my account on the website from my laptop."
+  },
+  {
+   "id": "N08",
+   "role": "Caller",
+   "near": "app_issue_mentioned",
+   "sentence": "I don't use the app very often."
+  },
+  {
+   "id": "N09",
+   "role": "Caller",
+   "near": "receiving_error_messages",
+   "sentence": "It just stops without any warning on the screen."
+  },
+  {
+   "id": "N10",
+   "role": "Caller",
+   "near": "credit_requested",
+   "sentence": "I hope this doesn't end up affecting my bill."
+  },
+  {
+   "id": "N11",
+   "role": "Caller",
+   "near": "reset_equipment_mentioned",
+   "sentence": "I haven't touched the equipment at all."
+  },
+  {
+   "id": "N12",
+   "role": "Caller",
+   "near": "technician_visits_mentioned",
+   "sentence": "Nobody has come out to look at it yet."
+  },
+  {
+   "id": "N13",
+   "role": "Caller",
+   "near": "unable_to_work_due_to_service_issues",
+   "sentence": "It has been inconvenient during my workday."
+  },
+  {
+   "id": "N14",
+   "role": "Caller",
+   "near": "resolution_time_concern",
+   "sentence": "I just hope it gets fixed."
+  },
+  {
+   "id": "N15",
+   "role": "Caller",
+   "near": "lagging_issues",
+   "sentence": "The connection drops completely now and then."
+  },
+  {
+   "id": "N16",
+   "role": "Caller",
+   "near": "throughput_issues_mentioned",
+   "sentence": "It all feels slower than it used to."
+  },
+  {
+   "id": "N17",
+   "role": "Agent",
+   "near": "sales_attempt_by_agent",
+   "sentence": "I can email you a summary of today's changes at no charge."
+  },
+  {
+   "id": "N18",
+   "role": "Agent",
+   "near": "credit_applied_by_agent",
+   "sentence": "Any credit would need to be approved by the billing team first."
+  },
+  {
+   "id": "N19",
+   "role": "Agent",
+   "near": "agent_attempted_resolution",
+   "sentence": "I understand how frustrating this must be."
+  },
+  {
+   "id": "N20",
+   "role": "Caller",
+   "near": "multiple_contacts_same_issue",
+   "sentence": "I have called before about a different matter."
+  }
+ ]
+}

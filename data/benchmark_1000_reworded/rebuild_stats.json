@@ -1,0 +1,30 @@
+{
+ "variants_sha256": "b757a55ac1bb367ae490b3095604816ad75e43977ff495df1c5f8c50166660fa",
+ "seed": 20260919,
+ "conditions": {
+  "para": {
+   "rows": 300,
+   "conversations_changed": 300,
+   "sentences_replaced": 2339,
+   "near_misses_inserted": 0
+  },
+  "orig_near": {
+   "rows": 300,
+   "conversations_changed": 300,
+   "sentences_replaced": 0,
+   "near_misses_inserted": 600
+  },
+  "para_near": {
+   "rows": 300,
+   "conversations_changed": 300,
+   "sentences_replaced": 2339,
+   "near_misses_inserted": 600
+  },
+  "para_curly": {
+   "rows": 300,
+   "conversations_changed": 300,
+   "sentences_replaced": 2339,
+   "near_misses_inserted": 0
+  }
+ }
+}
